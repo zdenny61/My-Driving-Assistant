@@ -23,6 +23,7 @@
 		0F8DA4C0217ECA2800551D18 /* CallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4BF217ECA2800551D18 /* CallController.swift */; };
 		0F8DA4C2217ECA4900551D18 /* DocumentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */; };
 		0F8DA4C5217F93DF00551D18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8DA4C4217F93DF00551D18 /* CoreLocation.framework */; };
+		0F8DA4C7217F9D4200551D18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8DA4C6217F9D4200551D18 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		0F8DA4BF217ECA2800551D18 /* CallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallController.swift; sourceTree = "<group>"; };
 		0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsController.swift; sourceTree = "<group>"; };
 		0F8DA4C4217F93DF00551D18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0F8DA4C6217F9D4200551D18 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8DA4C7217F9D4200551D18 /* MapKit.framework in Frameworks */,
 				0F8DA4C5217F93DF00551D18 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +159,7 @@
 		0F8DA4C3217F93DE00551D18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F8DA4C6217F9D4200551D18 /* MapKit.framework */,
 				0F8DA4C4217F93DF00551D18 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -229,6 +233,11 @@
 				TargetAttributes = {
 					0F69E685216D4D90006D56EA = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					0F69E69C216D4D92006D56EA = {
 						CreatedOnToolsVersion = 10.0;
