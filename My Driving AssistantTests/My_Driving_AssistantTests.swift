@@ -2,7 +2,7 @@
 //  My_Driving_AssistantTests.swift
 //  My Driving AssistantTests
 //
-//  Created by Apple Developer on 10/9/18.
+//  Created by Zachary Denny on 10/9/18.
 //  Copyright © 2018 Denny Homes. All rights reserved.
 //
 

@@ -15,6 +15,13 @@
 		0F69E697216D4D92006D56EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F69E695216D4D92006D56EA /* LaunchScreen.storyboard */; };
 		0F69E6A2216D4D92006D56EA /* My_Driving_AssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F69E6A1216D4D92006D56EA /* My_Driving_AssistantTests.swift */; };
 		0F69E6AD216D4D92006D56EA /* My_Driving_AssistantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F69E6AC216D4D92006D56EA /* My_Driving_AssistantUITests.swift */; };
+		0F69E6BB216D4F2D006D56EA /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 0F69E6BA216D4F2D006D56EA /* Images */; };
+		0F69E6BD216D5177006D56EA /* blue-circle-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F69E6BC216D5166006D56EA /* blue-circle-button.png */; };
+		0F8DA4BA217E722F00551D18 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 0F8DA4B9217E722F00551D18 /* icon */; };
+		0F8DA4BC217EC8E800551D18 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4BB217EC8E800551D18 /* LocationController.swift */; };
+		0F8DA4BE217ECA0100551D18 /* HelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4BD217ECA0100551D18 /* HelpController.swift */; };
+		0F8DA4C0217ECA2800551D18 /* CallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4BF217ECA2800551D18 /* CallController.swift */; };
+		0F8DA4C2217ECA4900551D18 /* DocumentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		0F69E6A8216D4D92006D56EA /* My Driving AssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Driving AssistantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F69E6AC216D4D92006D56EA /* My_Driving_AssistantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Driving_AssistantUITests.swift; sourceTree = "<group>"; };
 		0F69E6AE216D4D92006D56EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F69E6BA216D4F2D006D56EA /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		0F69E6BC216D5166006D56EA /* blue-circle-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-circle-button.png"; sourceTree = "<group>"; };
+		0F8DA4B9217E722F00551D18 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icon; path = ../../../icon; sourceTree = "<group>"; };
+		0F8DA4BB217EC8E800551D18 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		0F8DA4BD217ECA0100551D18 /* HelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpController.swift; sourceTree = "<group>"; };
+		0F8DA4BF217ECA2800551D18 /* CallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallController.swift; sourceTree = "<group>"; };
+		0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +115,14 @@
 			children = (
 				0F69E689216D4D90006D56EA /* AppDelegate.swift */,
 				0F69E68B216D4D90006D56EA /* ViewController.swift */,
+				0F8DA4BB217EC8E800551D18 /* LocationController.swift */,
 				0F69E68D216D4D90006D56EA /* Main.storyboard */,
+				0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */,
+				0F8DA4BF217ECA2800551D18 /* CallController.swift */,
+				0F8DA4BD217ECA0100551D18 /* HelpController.swift */,
+				0F8DA4B9217E722F00551D18 /* icon */,
+				0F69E6BC216D5166006D56EA /* blue-circle-button.png */,
+				0F69E6BA216D4F2D006D56EA /* Images */,
 				0F69E693216D4D92006D56EA /* Assets.xcassets */,
 				0F69E695216D4D92006D56EA /* LaunchScreen.storyboard */,
 				0F69E698216D4D92006D56EA /* Info.plist */,
@@ -232,9 +253,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F69E6BB216D4F2D006D56EA /* Images in Resources */,
+				0F8DA4BA217E722F00551D18 /* icon in Resources */,
 				0F69E697216D4D92006D56EA /* LaunchScreen.storyboard in Resources */,
 				0F69E694216D4D92006D56EA /* Assets.xcassets in Resources */,
 				0F69E68F216D4D90006D56EA /* Main.storyboard in Resources */,
+				0F69E6BD216D5177006D56EA /* blue-circle-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8DA4BC217EC8E800551D18 /* LocationController.swift in Sources */,
+				0F8DA4BE217ECA0100551D18 /* HelpController.swift in Sources */,
 				0F69E68C216D4D90006D56EA /* ViewController.swift in Sources */,
+				0F8DA4C0217ECA2800551D18 /* CallController.swift in Sources */,
 				0F69E68A216D4D90006D56EA /* AppDelegate.swift in Sources */,
+				0F8DA4C2217ECA4900551D18 /* DocumentsController.swift in Sources */,
 				0F69E692216D4D90006D56EA /* My_Driving_Assistant.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,7 +471,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Zachary.Driving.Denny.My-Driving-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = Zachary.Driving.Denny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Zachary.Driving.Denny.My-Driving-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = Zachary.Driving.Denny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
