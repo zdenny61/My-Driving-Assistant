@@ -22,6 +22,7 @@
 		0F8DA4BE217ECA0100551D18 /* HelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4BD217ECA0100551D18 /* HelpController.swift */; };
 		0F8DA4C0217ECA2800551D18 /* CallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4BF217ECA2800551D18 /* CallController.swift */; };
 		0F8DA4C2217ECA4900551D18 /* DocumentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */; };
+		0F8DA4C5217F93DF00551D18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8DA4C4217F93DF00551D18 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		0F8DA4BD217ECA0100551D18 /* HelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpController.swift; sourceTree = "<group>"; };
 		0F8DA4BF217ECA2800551D18 /* CallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallController.swift; sourceTree = "<group>"; };
 		0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsController.swift; sourceTree = "<group>"; };
+		0F8DA4C4217F93DF00551D18 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8DA4C5217F93DF00551D18 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +100,7 @@
 				0F69E6A0216D4D92006D56EA /* My Driving AssistantTests */,
 				0F69E6AB216D4D92006D56EA /* My Driving AssistantUITests */,
 				0F69E687216D4D90006D56EA /* Products */,
+				0F8DA4C3217F93DE00551D18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +151,14 @@
 				0F69E6AE216D4D92006D56EA /* Info.plist */,
 			);
 			path = "My Driving AssistantUITests";
+			sourceTree = "<group>";
+		};
+		0F8DA4C3217F93DE00551D18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F8DA4C4217F93DF00551D18 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
