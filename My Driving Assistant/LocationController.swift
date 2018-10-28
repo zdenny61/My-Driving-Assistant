@@ -12,7 +12,7 @@ import CoreLocation
 
 
 private var currentLocation: CLLocation?
-
+//public var searchKey: String
 
 
 class LocationController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
@@ -83,6 +83,9 @@ class LocationController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     
     func searchInMap() {
+        
+        //Get searchKey from other class and search it as the request
+       // searchKey = getSearchKey
         
         // Search string Request
         let request = MKLocalSearch.Request()

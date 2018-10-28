@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F63AC25218269240026E0C8 /* MapSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63AC24218269240026E0C8 /* MapSelectorController.swift */; };
 		0F69E68A216D4D90006D56EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F69E689216D4D90006D56EA /* AppDelegate.swift */; };
 		0F69E68C216D4D90006D56EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F69E68B216D4D90006D56EA /* ViewController.swift */; };
 		0F69E68F216D4D90006D56EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F69E68D216D4D90006D56EA /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F63AC24218269240026E0C8 /* MapSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectorController.swift; sourceTree = "<group>"; };
 		0F69E686216D4D90006D56EA /* My Driving Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Driving Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F69E689216D4D90006D56EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F69E68B216D4D90006D56EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				0F69E689216D4D90006D56EA /* AppDelegate.swift */,
 				0F69E68B216D4D90006D56EA /* ViewController.swift */,
+				0F63AC24218269240026E0C8 /* MapSelectorController.swift */,
 				0F8DA4BB217EC8E800551D18 /* LocationController.swift */,
 				0F69E68D216D4D90006D56EA /* Main.storyboard */,
 				0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */,
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F8DA4BC217EC8E800551D18 /* LocationController.swift in Sources */,
+				0F63AC25218269240026E0C8 /* MapSelectorController.swift in Sources */,
 				0F8DA4BE217ECA0100551D18 /* HelpController.swift in Sources */,
 				0F69E68C216D4D90006D56EA /* ViewController.swift in Sources */,
 				0F8DA4C0217ECA2800551D18 /* CallController.swift in Sources */,
