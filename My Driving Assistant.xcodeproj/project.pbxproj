@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F33D6692198EC4600092AA5 /* White-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D6682198EA5B00092AA5 /* White-Button.png */; };
+		0F33D66C2198F35800092AA5 /* Document-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D66A2198F35300092AA5 /* Document-Logo.png */; };
+		0F33D66D2198F35A00092AA5 /* DL-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D66B2198F35400092AA5 /* DL-Logo.png */; };
+		0F33D66F2198F65500092AA5 /* Emergency-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D66E2198F65200092AA5 /* Emergency-Button.png */; };
 		0F63AC25218269240026E0C8 /* MapSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63AC24218269240026E0C8 /* MapSelectorController.swift */; };
 		0F69E68A216D4D90006D56EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F69E689216D4D90006D56EA /* AppDelegate.swift */; };
 		0F69E68C216D4D90006D56EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F69E68B216D4D90006D56EA /* ViewController.swift */; };
@@ -45,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F33D6682198EA5B00092AA5 /* White-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "White-Button.png"; sourceTree = "<group>"; };
+		0F33D66A2198F35300092AA5 /* Document-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Document-Logo.png"; sourceTree = "<group>"; };
+		0F33D66B2198F35400092AA5 /* DL-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DL-Logo.png"; sourceTree = "<group>"; };
+		0F33D66E2198F65200092AA5 /* Emergency-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Emergency-Button.png"; sourceTree = "<group>"; };
 		0F63AC24218269240026E0C8 /* MapSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectorController.swift; sourceTree = "<group>"; };
 		0F69E686216D4D90006D56EA /* My Driving Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Driving Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F69E689216D4D90006D56EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +140,10 @@
 				0F8DA4BD217ECA0100551D18 /* HelpController.swift */,
 				0F8DA4B9217E722F00551D18 /* icon */,
 				0F69E6BC216D5166006D56EA /* blue-circle-button.png */,
+				0F33D6682198EA5B00092AA5 /* White-Button.png */,
+				0F33D66B2198F35400092AA5 /* DL-Logo.png */,
+				0F33D66A2198F35300092AA5 /* Document-Logo.png */,
+				0F33D66E2198F65200092AA5 /* Emergency-Button.png */,
 				0F69E6BA216D4F2D006D56EA /* Images */,
 				0F69E693216D4D92006D56EA /* Assets.xcassets */,
 				0F69E695216D4D92006D56EA /* LaunchScreen.storyboard */,
@@ -278,10 +290,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F69E6BB216D4F2D006D56EA /* Images in Resources */,
+				0F33D66C2198F35800092AA5 /* Document-Logo.png in Resources */,
+				0F33D6692198EC4600092AA5 /* White-Button.png in Resources */,
 				0F8DA4BA217E722F00551D18 /* icon in Resources */,
 				0F69E697216D4D92006D56EA /* LaunchScreen.storyboard in Resources */,
+				0F33D66F2198F65500092AA5 /* Emergency-Button.png in Resources */,
 				0F69E694216D4D92006D56EA /* Assets.xcassets in Resources */,
 				0F69E68F216D4D90006D56EA /* Main.storyboard in Resources */,
+				0F33D66D2198F35A00092AA5 /* DL-Logo.png in Resources */,
 				0F69E6BD216D5177006D56EA /* blue-circle-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

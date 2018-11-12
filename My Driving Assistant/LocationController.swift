@@ -23,6 +23,10 @@ class LocationController: UIViewController, CLLocationManagerDelegate, MKMapView
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+      
+        
+        
         // Call for Search to start
         searchInMap()
     }
@@ -89,7 +93,8 @@ class LocationController: UIViewController, CLLocationManagerDelegate, MKMapView
         
         // Search string Request
         let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = "Oil Change"
+        //request.naturalLanguageQuery = "Oil Change"
+        request.naturalLanguageQuery = MapSelectorController().getSearchString()
         
         // Start Search
         let search = MKLocalSearch(request: request)

@@ -15,6 +15,21 @@ class CallController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+//Call Funtion
+    
+    func phone(phoneNum: String) {
+        if let url = URL(string: "tel://\(phoneNum)") {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url as URL)
+            }
+        }
+    }
+    
+    
+    
+    
     
 }
 

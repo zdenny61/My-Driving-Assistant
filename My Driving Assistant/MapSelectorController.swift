@@ -44,6 +44,45 @@ class MapSelectorController: UIViewController {
     
     
     
+//Button Setters
+    
+    //Oil Change
+    @IBAction func OilChangeSelect(_ sender: Any) {
+        setSearchString(passKey: "Oil Change")
+        print("Search key is now Oil Change")
+    }
+    
+    //Tire Repair
+    @IBAction func TireRepairSelect(_ sender: Any) {
+        setSearchString(passKey: "Tire")
+        print("Search key is now Tire")
+    }
+    
+    //Towing Center
+    @IBAction func TowingCenterSelect(_ sender: Any) {
+        setSearchString(passKey: "Towing")
+        print("Search key is now Towing")
+    }
+    
+    //Collision Repair
+    @IBAction func CollisionRepairSelect(_ sender: Any) {
+        setSearchString(passKey: "Collision")
+        print("Search key is now Collision")
+    }
+    
+    //AAA Center
+    @IBAction func AAACenterSelect(_ sender: Any) {
+        setSearchString(passKey: "AAA")
+        print("Search key is now AAA")
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     
 }
 
