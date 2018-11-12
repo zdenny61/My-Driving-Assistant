@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -624,10 +624,50 @@
                                     <segue destination="AyN-wE-lfz" kind="show" id="Cbp-lA-q2M"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TVe-BW-HKC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TVe-BW-HKC">
                                 <rect key="frame" x="16" y="66" width="343" height="581"/>
                                 <color key="backgroundColor" red="0.1282487722" green="0.57516057539999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <string key="text">This is the help page and the about page. This is where you will find the information about the creators and basic operations on how to use this application.</string>
+                                <mutableString key="text">How to change a tire 
+
+Required (Spare tire, 4-way ,a Jack, Jack stands,Wheel wedges,Space and Level ground)
+1. Place wedges under the tires to prevent the car from moving while working. 
+
+2. Find jack point on the vehicle, usually indicate by arrow or indentation on the frame of the vehicle
+
+3. Loosen lug nuts the with  4-way but don't unscrew lug nuts all the way off.
+
+4. Jack the car up from the jack point.
+
+5. when the car is at the desired height add jack stands to the frame for safety.
+
+6.  Finish unscrewing lug nuts and replace the tire.
+
+7. Screw lugs back on hand tight.
+
+8. Remove jack stands and lower the vehicle so that the spare tire is resting on the ground but the full weight of the vehicle isn’t fully on the tire.
+
+9. Tighten lug nuts in a star formation. 
+
+10. Lower the car completely and tighten lug nuts one more time.
+
+
+
+How to jump a car with another car
+
+Required (another car , jumper cables)
+1. Make sure the cables is long enough and have the car positioned next to one another
+
+2. Pop the hood on both cars and find the battery compartments
+
+3. Apply cables to the running car (positive to positive ,negative to negative)
+
+4. Apply cables to the dead car
+
+5. Start the running car then wait a minute or two then  start the dead car.
+
+6. If the car doesn't start, the battery is probably dead and needs to be recharged or replaced.
+
+7. If it's not the battery then you have other mechanical issues.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -668,7 +708,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XgV-i9-yb3"/>
-        <segue reference="d4L-cF-Tt7"/>
+        <segue reference="Cbp-lA-q2M"/>
         <segue reference="HHW-2Q-vI3"/>
         <segue reference="7i7-LS-sgF"/>
     </inferredMetricsTieBreakers>
