@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F15BFC22199274200DFA452 /* CallControllerTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F15BFC12199274200DFA452 /* CallControllerTableTableViewController.swift */; };
+		0F15BFC42199603200DFA452 /* EmergencyContactsID.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0F15BFC32199603200DFA452 /* EmergencyContactsID.txt */; };
 		0F33D6692198EC4600092AA5 /* White-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D6682198EA5B00092AA5 /* White-Button.png */; };
 		0F33D66C2198F35800092AA5 /* Document-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D66A2198F35300092AA5 /* Document-Logo.png */; };
 		0F33D66D2198F35A00092AA5 /* DL-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D66B2198F35400092AA5 /* DL-Logo.png */; };
@@ -22,6 +24,10 @@
 		0F69E6AD216D4D92006D56EA /* My_Driving_AssistantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F69E6AC216D4D92006D56EA /* My_Driving_AssistantUITests.swift */; };
 		0F69E6BB216D4F2D006D56EA /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 0F69E6BA216D4F2D006D56EA /* Images */; };
 		0F69E6BD216D5177006D56EA /* blue-circle-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F69E6BC216D5166006D56EA /* blue-circle-button.png */; };
+		0F6E777B219A899900BCE3AF /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E7778219A899800BCE3AF /* Models */; };
+		0F6E777C219A899900BCE3AF /* MemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E7779219A899800BCE3AF /* MemeCell.xib */; };
+		0F6E777D219A899900BCE3AF /* MemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E777A219A899900BCE3AF /* MemeCell.swift */; };
+		0F6E777F219A89E200BCE3AF /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E777E219A89E200BCE3AF /* MemeModel.swift */; };
 		0F8DA4BA217E722F00551D18 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 0F8DA4B9217E722F00551D18 /* icon */; };
 		0F8DA4BC217EC8E800551D18 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4BB217EC8E800551D18 /* LocationController.swift */; };
 		0F8DA4BE217ECA0100551D18 /* HelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DA4BD217ECA0100551D18 /* HelpController.swift */; };
@@ -49,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F15BFC12199274200DFA452 /* CallControllerTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallControllerTableTableViewController.swift; sourceTree = "<group>"; };
+		0F15BFC32199603200DFA452 /* EmergencyContactsID.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = EmergencyContactsID.txt; sourceTree = "<group>"; };
 		0F33D6682198EA5B00092AA5 /* White-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "White-Button.png"; sourceTree = "<group>"; };
 		0F33D66A2198F35300092AA5 /* Document-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Document-Logo.png"; sourceTree = "<group>"; };
 		0F33D66B2198F35400092AA5 /* DL-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DL-Logo.png"; sourceTree = "<group>"; };
@@ -70,6 +78,10 @@
 		0F69E6AE216D4D92006D56EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F69E6BA216D4F2D006D56EA /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		0F69E6BC216D5166006D56EA /* blue-circle-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-circle-button.png"; sourceTree = "<group>"; };
+		0F6E7778219A899800BCE3AF /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		0F6E7779219A899800BCE3AF /* MemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemeCell.xib; sourceTree = "<group>"; };
+		0F6E777A219A899900BCE3AF /* MemeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCell.swift; sourceTree = "<group>"; };
+		0F6E777E219A89E200BCE3AF /* MemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 		0F8DA4B9217E722F00551D18 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icon; path = ../../../icon; sourceTree = "<group>"; };
 		0F8DA4BB217EC8E800551D18 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		0F8DA4BD217ECA0100551D18 /* HelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpController.swift; sourceTree = "<group>"; };
@@ -135,13 +147,19 @@
 				0F63AC24218269240026E0C8 /* MapSelectorController.swift */,
 				0F8DA4BB217EC8E800551D18 /* LocationController.swift */,
 				0F69E68D216D4D90006D56EA /* Main.storyboard */,
+				0F15BFC32199603200DFA452 /* EmergencyContactsID.txt */,
 				0F8DA4C1217ECA4900551D18 /* DocumentsController.swift */,
 				0F8DA4BF217ECA2800551D18 /* CallController.swift */,
+				0F15BFC12199274200DFA452 /* CallControllerTableTableViewController.swift */,
 				0F8DA4BD217ECA0100551D18 /* HelpController.swift */,
 				0F8DA4B9217E722F00551D18 /* icon */,
 				0F69E6BC216D5166006D56EA /* blue-circle-button.png */,
 				0F33D6682198EA5B00092AA5 /* White-Button.png */,
 				0F33D66B2198F35400092AA5 /* DL-Logo.png */,
+				0F6E777A219A899900BCE3AF /* MemeCell.swift */,
+				0F6E7779219A899800BCE3AF /* MemeCell.xib */,
+				0F6E777E219A89E200BCE3AF /* MemeModel.swift */,
+				0F6E7778219A899800BCE3AF /* Models */,
 				0F33D66A2198F35300092AA5 /* Document-Logo.png */,
 				0F33D66E2198F65200092AA5 /* Emergency-Button.png */,
 				0F69E6BA216D4F2D006D56EA /* Images */,
@@ -293,9 +311,12 @@
 				0F33D66C2198F35800092AA5 /* Document-Logo.png in Resources */,
 				0F33D6692198EC4600092AA5 /* White-Button.png in Resources */,
 				0F8DA4BA217E722F00551D18 /* icon in Resources */,
+				0F6E777C219A899900BCE3AF /* MemeCell.xib in Resources */,
 				0F69E697216D4D92006D56EA /* LaunchScreen.storyboard in Resources */,
 				0F33D66F2198F65500092AA5 /* Emergency-Button.png in Resources */,
+				0F6E777B219A899900BCE3AF /* Models in Resources */,
 				0F69E694216D4D92006D56EA /* Assets.xcassets in Resources */,
+				0F15BFC42199603200DFA452 /* EmergencyContactsID.txt in Resources */,
 				0F69E68F216D4D90006D56EA /* Main.storyboard in Resources */,
 				0F33D66D2198F35A00092AA5 /* DL-Logo.png in Resources */,
 				0F69E6BD216D5177006D56EA /* blue-circle-button.png in Resources */,
@@ -330,6 +351,9 @@
 				0F8DA4C0217ECA2800551D18 /* CallController.swift in Sources */,
 				0F69E68A216D4D90006D56EA /* AppDelegate.swift in Sources */,
 				0F8DA4C2217ECA4900551D18 /* DocumentsController.swift in Sources */,
+				0F6E777F219A89E200BCE3AF /* MemeModel.swift in Sources */,
+				0F6E777D219A899900BCE3AF /* MemeCell.swift in Sources */,
+				0F15BFC22199274200DFA452 /* CallControllerTableTableViewController.swift in Sources */,
 				0F69E692216D4D90006D56EA /* My_Driving_Assistant.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WT8F4364Z;
 				INFOPLIST_FILE = "My Driving Assistant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,6 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WT8F4364Z;
 				INFOPLIST_FILE = "My Driving Assistant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
