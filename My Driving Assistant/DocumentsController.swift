@@ -9,16 +9,16 @@
 import UIKit
 import LocalAuthentication
 
-
+var touchIndex = 0
 
 class DocumentsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     //Docs Array
     let data: [MemeModel] = [MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "ID"),
                              MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "Registration"),
                              MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "Insurence")]
-  
+
     
-   
+   //Collection View
     @IBOutlet var collectionView: UICollectionView!
     
     
@@ -35,11 +35,6 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
   
    
     
-//    override init(collectionViewLayout layout: UICollectionViewLayout) {
-//        super.init(layout)
-//        self.collectionView?.dataSource = self
-//    }
-    
 
     
     
@@ -49,18 +44,12 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
     //Must Authenticat Lable
     @IBOutlet weak var AuthenticatLB: UILabel!
     
-    //Collection View
-    @IBOutlet weak var docCollectionView: UICollectionView!
     
     // let store = DataStore.sharedInstance
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       // docCollectionView.dataSource = self
-        //docCollectionView.delegate = self
-        //docCollectionView.register(UINib.init(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         
         
         collectionView.dataSource = self
@@ -68,7 +57,7 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.register(UINib.init(nibName: "MemeCell", bundle: nil), forCellWithReuseIdentifier: "MemeCell")
         
         
-        
+        //blur and authentication lb for securety method for doc viewing **set to false for production ver.
         blurView.isHidden = false
         AuthenticatLB.isHidden = false
         
@@ -106,15 +95,36 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
         
         
         
-        //Load Documents
         
-//        store.getBookImages {
-//            self.docCollectionView.reloadSections(IndexSet(integer: 0))
-//        }
-//        
-//       
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        print(indexPath.item)
         
+        //set touchIndex to touched index of collection cell
+        settouchIndex(passIndex: Int(indexPath.item))
+        
+//Push to lookingView
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "lookingView")
+            
+            else {
+            print("View controller lookingView not found")
+            return
+        }
+        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
+        
+    
+    // setters/getters for touchIndex
+    func gettouchIndex() -> Int {
+        return touchIndex
+    }
+    func settouchIndex(passIndex: Int) {
+        touchIndex = passIndex
     }
     
    
@@ -122,22 +132,14 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return store.audiobooks.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
-//
-//        let book = store.audiobooks[indexPath.row]
-//
-//        cell.displayContent(image: store.images[indexPath.row], title: book.name)
-//
-//        return cell
-//
-//    }
     
     
-}
+    
+    
+    
+    
+    
+    
 
+//End
+}

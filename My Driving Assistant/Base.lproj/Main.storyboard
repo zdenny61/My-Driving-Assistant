@@ -298,6 +298,76 @@
             </objects>
             <point key="canvasLocation" x="-15.199999999999999" y="474.51274362818594"/>
         </scene>
+        <!--Looking View Controller-->
+        <scene sceneID="GcJ-nG-tWI">
+            <objects>
+                <viewController storyboardIdentifier="lookingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mCK-86-spm" customClass="lookingViewController" customModule="My_Driving_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EtI-TZ-JUM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69O-rq-n50">
+                                <rect key="frame" x="16" y="20" width="93" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="5vB-Ps-0nB"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FRQ-0y-Iqt" kind="show" id="W4m-Zv-hq6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="         Doc View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf6-oD-Lx9">
+                                <rect key="frame" x="117" y="31" width="242" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rsz-QD-Cby">
+                                <rect key="frame" x="16" y="71" width="343" height="321"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FQt-tk-JhK">
+                                <rect key="frame" x="16" y="400" width="343" height="247"/>
+                                <color key="backgroundColor" red="0.26765921710000001" green="0.59671926500000005" blue="0.96866947410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="q5X-ao-ysm"/>
+                                </constraints>
+                                <string key="text">Name On Document: Zachary Denny
+Document Type: Drivers Licence
+Expiration Date: 0/0/0</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26765921710000001" green="0.59671926500000005" blue="0.96866947410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="yf6-oD-Lx9" firstAttribute="trailing" secondItem="Rsz-QD-Cby" secondAttribute="trailing" id="2fM-Qn-S79"/>
+                            <constraint firstItem="FQt-tk-JhK" firstAttribute="top" secondItem="Rsz-QD-Cby" secondAttribute="bottom" constant="8" symbolic="YES" id="7nh-PY-9t7"/>
+                            <constraint firstItem="yf6-oD-Lx9" firstAttribute="trailing" secondItem="EtI-TZ-JUM" secondAttribute="trailingMargin" id="Bbe-vh-gjC"/>
+                            <constraint firstItem="69O-rq-n50" firstAttribute="leading" secondItem="Rsz-QD-Cby" secondAttribute="leading" id="DJd-wA-qEV"/>
+                            <constraint firstItem="yf6-oD-Lx9" firstAttribute="leading" secondItem="69O-rq-n50" secondAttribute="trailing" constant="8" symbolic="YES" id="EM3-gi-IGn"/>
+                            <constraint firstItem="69O-rq-n50" firstAttribute="firstBaseline" secondItem="yf6-oD-Lx9" secondAttribute="firstBaseline" id="NFB-bO-2RO"/>
+                            <constraint firstItem="Rsz-QD-Cby" firstAttribute="leading" secondItem="FQt-tk-JhK" secondAttribute="leading" id="Xkw-7y-Z1Y"/>
+                            <constraint firstItem="Rsz-QD-Cby" firstAttribute="top" secondItem="69O-rq-n50" secondAttribute="bottom" constant="8" symbolic="YES" id="XpU-Df-DeQ"/>
+                            <constraint firstItem="69O-rq-n50" firstAttribute="top" secondItem="enk-IE-xrg" secondAttribute="top" id="dlQ-ZG-7jN"/>
+                            <constraint firstItem="yf6-oD-Lx9" firstAttribute="top" secondItem="enk-IE-xrg" secondAttribute="top" constant="11" id="rrp-yE-yRl"/>
+                            <constraint firstAttribute="bottom" secondItem="FQt-tk-JhK" secondAttribute="bottom" constant="20" symbolic="YES" id="tbc-gz-MBB"/>
+                            <constraint firstItem="Rsz-QD-Cby" firstAttribute="trailing" secondItem="FQt-tk-JhK" secondAttribute="trailing" id="xGM-dZ-wHV"/>
+                            <constraint firstItem="69O-rq-n50" firstAttribute="leading" secondItem="EtI-TZ-JUM" secondAttribute="leadingMargin" id="z4c-0J-QcY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="enk-IE-xrg"/>
+                    </view>
+                    <connections>
+                        <outlet property="docImageView" destination="Rsz-QD-Cby" id="16w-Vv-V9w"/>
+                        <outlet property="docInfoView" destination="FQt-tk-JhK" id="Opi-O2-98U"/>
+                        <outlet property="titleLb" destination="yf6-oD-Lx9" id="qLN-mU-2GL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNs-Hc-gYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3143.1999999999998" y="474.51274362818594"/>
+        </scene>
         <!--Documents Controller-->
         <scene sceneID="Wgx-Ce-kZ7">
             <objects>
@@ -812,8 +882,9 @@ Required (another car, jumper cables)
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XgV-i9-yb3"/>
+        <segue reference="W4m-Zv-hq6"/>
         <segue reference="d4L-cF-Tt7"/>
         <segue reference="HHW-2Q-vI3"/>
-        <segue reference="bKv-55-PpB"/>
+        <segue reference="hwZ-lY-91j"/>
     </inferredMetricsTieBreakers>
 </document>
