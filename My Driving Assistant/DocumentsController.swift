@@ -10,12 +10,17 @@ import UIKit
 import LocalAuthentication
 
 var touchIndex = 0
+let imageData = #imageLiteral(resourceName: "DL-Logo.png").pngData()
+var data: [MemeModel] = [MemeModel(image: imageData as! NSData, name: "ID", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+                         MemeModel(image: imageData as! NSData, name: "Registration", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+                         MemeModel(image: imageData as! NSData, name: "Insurence", nameOnDoc: "Zachary Denny", expDate: "01/27/1997")]
+
 
 class DocumentsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     //Docs Array
-    let data: [MemeModel] = [MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "ID"),
-                             MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "Registration"),
-                             MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "Insurence")]
+//    var data: [MemeModel] = [MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "ID"),
+//                             MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "Registration"),
+//                             MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "Insurence")]
 
     
    //Collection View

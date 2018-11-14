@@ -121,7 +121,7 @@ class CallControllerTableTableViewController: UITableViewController {
             
             
             
-            
+            //Uncomment to write the file for names
             
 //            // Write to the file named Test
 //            let outString = "Emergency 911,<< Contact 1 Slide Left,<< Contact 2 Slide Left,<< Contact 3 Slide Left,<< Contact 4 Slide Left"
@@ -155,6 +155,10 @@ class CallControllerTableTableViewController: UITableViewController {
         
         // If the directory was found, we write a file to it and read it back
         if let fileURL = dirNum?.appendingPathComponent(fileNameNum).appendingPathExtension("txt") {
+            
+            
+            //Uncomment to write the file for numbers
+            
             
 //                        // Write to the file named Test
 //                        let outString = "7857669375,Error,Error,Error,Error"

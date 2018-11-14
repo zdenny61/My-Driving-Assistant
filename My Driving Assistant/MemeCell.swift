@@ -19,7 +19,7 @@ class MemeCell: UICollectionViewCell {
     }
     
     public func configure(with model: MemeModel) {
-        image.image = model.image
+        image.image = UIImage(data: model.image as Data)
         name.text = model.name
     }
 }
