@@ -34,7 +34,103 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        //Encode users doc data
         
-      let encodedData = try? JSONEncoder().encode(data)
+//Used for retreaving
+        // Getting
+        
+        let defaults = UserDefaults.standard
+        if let stringOne = defaults.data(forKey: usersData.usersDoc) {
+            print(stringOne) // Some String Value
+
+
+
+            do {
+
+                let myStruct = try JSONDecoder().decode(Array<MemeModel>.self, from: stringOne) // do your decoding here
+                //print(myStruct)
+
+                //setting var data to the decoded stuct that was pulled
+                data = myStruct
+                print("data was changed to myStruct")
+
+
+
+
+
+            } catch {
+                print(error) // any decoding error will be printed here!
+                print("did not make it")
+            }
+
+
+
+
+       }
+       
+//        if let stringTwo = defaults.string(forKey: usersData.userFirstTime){
+//            //do first time stuff here
+//            print("Made it here")
+//            if stringTwo == "NO"{
+//                //This is not the first time the app is opened
+//                 print("Not first time running!")
+//
+//                if let stringOne = defaults.data(forKey: usersData.usersDoc) {
+//                    print(stringOne) // Some String Value
+//
+//
+//
+//
+//
+//                    do {
+//
+//                        let myStruct = try JSONDecoder().decode(Array<MemeModel>.self, from: stringOne) // do your decoding here
+//                        //print(myStruct)
+//
+//                        //setting var data to the decoded stuct that was pulled
+//                        data = myStruct
+//                        print("data was changed to myStruct")
+//
+//
+//
+//
+//
+//                    } catch {
+//                        print(error) // any decoding error will be printed here!
+//                        print("did not make it")
+//                    }
+//
+//
+//
+//
+//
+//
+//
+//
+//                }
+//
+//
+//
+//
+//            }else{
+//                //This is the first time the app is opened
+//                print("First time running!")
+//
+//
+//
+//
+//
+//
+//
+//
+//                defaults.set("NO", forKey: usersData.usersDoc)
+//                print("First time running changed to NO")
+//            }
+//
+//
+//
+//
+//        }
+//
+        
 //
 ////Save the users doc data into core data
         

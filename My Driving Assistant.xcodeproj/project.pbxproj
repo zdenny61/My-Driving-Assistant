@@ -38,6 +38,7 @@
 		0F8DA4C7217F9D4200551D18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8DA4C6217F9D4200551D18 /* MapKit.framework */; };
 		0FA49E31219B7C8800D17B76 /* MemeModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA49E30219B7C8800D17B76 /* MemeModelClass.swift */; };
 		0FA49E33219B7DCB00D17B76 /* testSave.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FA49E32219B7DCB00D17B76 /* testSave.txt */; };
+		0FEFFDDC219CD090003A82AB /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEFFDDB219CD090003A82AB /* keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		0F8DA4C6217F9D4200551D18 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0FA49E30219B7C8800D17B76 /* MemeModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModelClass.swift; sourceTree = "<group>"; };
 		0FA49E32219B7DCB00D17B76 /* testSave.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testSave.txt; sourceTree = "<group>"; };
+		0FEFFDDB219CD090003A82AB /* keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				0F69E689216D4D90006D56EA /* AppDelegate.swift */,
 				0F69E68B216D4D90006D56EA /* ViewController.swift */,
+				0FEFFDDB219CD090003A82AB /* keys.swift */,
 				0F63AC24218269240026E0C8 /* MapSelectorController.swift */,
 				0F8DA4BB217EC8E800551D18 /* LocationController.swift */,
 				0F69E68D216D4D90006D56EA /* Main.storyboard */,
@@ -361,6 +364,7 @@
 				0F69E68C216D4D90006D56EA /* ViewController.swift in Sources */,
 				0F6E7781219A902600BCE3AF /* lookingViewController.swift in Sources */,
 				0F8DA4C0217ECA2800551D18 /* CallController.swift in Sources */,
+				0FEFFDDC219CD090003A82AB /* keys.swift in Sources */,
 				0F69E68A216D4D90006D56EA /* AppDelegate.swift in Sources */,
 				0F8DA4C2217ECA4900551D18 /* DocumentsController.swift in Sources */,
 				0F6E777F219A89E200BCE3AF /* MemeModel.swift in Sources */,

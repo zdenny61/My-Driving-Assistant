@@ -54,12 +54,28 @@ class lookingViewController: UIViewController {
 //set alert box inputs into the array
             print(docNameTextField.text?.description as Any)
             //set document type into array
+//set doc type name
             data[touchIndex].name  = docNameTextField.text!
             print(self.docData[DocumentsController().gettouchIndex()].name)
+            self.titleLb.text = docNameTextField.text!
+//set doc name on doc
             print(nameTextField.text?.description as Any)
             data[touchIndex].nameOnDoc  = nameTextField.text!
+//set doc experation date
             print(expDateTextField.text?.description as Any)
             data[touchIndex].expDate  = expDateTextField.text!
+            
+//Save the data
+  //Used for saving
+            //encode data that is currently in var data
+            let encodedData = try? JSONEncoder().encode(data)
+            
+            
+            // Setting and saving userdefaults for the usersDoc data
+            let defaults = UserDefaults.standard
+            defaults.set(encodedData, forKey: usersData.usersDoc)
+            
+            
         })
         
         alertController.addTextField { (textField : UITextField!) -> Void in

@@ -34,22 +34,66 @@ class ViewController: UIViewController {
         
        
         
+////Used for saving
+       let encodedData = try? JSONEncoder().encode(data)
+//        print(encodedData?.description)
+//
+//        // Setting
+//
+//        let defaults = UserDefaults.standard
+//        defaults.set(encodedData, forKey: usersData.usersDoc)
+//
         
-        let encodedData = try? JSONEncoder().encode(data)
-        print(encodedData?.description)
+//Used for retreaving
+        // Getting
+        
+        //let defaults = UserDefaults.standard
+//        if let stringOne = defaults.data(forKey: usersData.usersDoc) {
+//            print(stringOne) // Some String Value
+        
+            
+            
+//            do {
+//
+//                let myStruct = try JSONDecoder().decode(Array<MemeModel>.self, from: stringOne) // do your decoding here
+//                //print(myStruct)
+//
+//                //setting var data to the decoded stuct that was pulled
+//                data = myStruct
+//                print("data was changed to myStruct")
+//
+//
+//
+//
+//
+//            } catch {
+//                print(error) // any decoding error will be printed here!
+//                print("did not make it")
+//            }
+        
+            
+            
+            
+            
+            
+            
+        
+       // }
+       
         
         
         
+//From here!!!!!!!!!!!
         let randomFilename = UUID().uuidString
         let fullPath = getDocumentsDirectory().appendingPathComponent(randomFilename)
         let url = URL(fileURLWithPath: "Users/appledeveloper/Documents/Projects/Apps/My Driving Assistant/Edit/My Driving Assistant/My Driving Assistant/testSave.txt")
-       
+
             if #available(iOS 11.0, *) {
                  do {
                     let dataTest = try NSKeyedArchiver.archivedData(withRootObject: encodedData, requiringSecureCoding: false)
                     try dataTest.write(to: url)
                     print("Could write to file")
-                    
+
                     do {
                         print("do happened")
                          let loadedStrings = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dataTest) as? [MemeModel]
@@ -57,55 +101,60 @@ class ViewController: UIViewController {
                             let savedArray = loadedStrings
                         print(savedArray)
                             print("it happened")
-                        
+
                     } catch {
                         print("Couldn't read file.")
                     }
-                    
-                    
+
+
                  } catch {
                     print("Couldn't write file")
                 }
-                
-                
-                
-                
+
+
+
+
 //                let encodedData = try? JSONEncoder().encode(data)
 //                print(encodedData?.description)
-                
+
              print("made it")
-                
-                
-                
-                
+
+
+
+
                 do {
 
-                    let myStruct = try JSONDecoder().decode(Array<MemeModel>.self, from: encodedData!) // do your decoding here
-                    //print(myStruct)
-                    
+//                    let myStruct = try JSONDecoder().decode(Array<MemeModel>.self, from: encodedData!) // do your decoding here
+//                    //print(myStruct)
+//
+//                    //setting var data to the decoded stuct that was pulled
+//                    data = myStruct
+//                    print("data was changed to myStruct")
+
+
                     if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                        
-                        
+
+
 //                        let fileURL = dir.appendingPathComponent("Users/appledeveloper/Documents/Projects/Apps/My Driving Assistant/Edit/My Driving Assistant/My Driving Assistant/testSave.txt")
 //
                         //writing
                         do {
-                            
-                            let dataTest = try NSKeyedArchiver.archivedData(withRootObject: myStruct.description, requiringSecureCoding: false)
+
+                            let dataTest = try NSKeyedArchiver.archivedData(withRootObject: encodedData, requiringSecureCoding: false)
                             try dataTest.write(to: url)
                             //try myStruct.description.write(to: fileURL, atomically: false, encoding: .utf8)
                         }
                         catch {print(error)}
-                    
-                    
+
+
                     }
-                    
+
                 } catch {
                     print(error) // any decoding error will be printed here!
                     print("did not make it")
                 }
-                
-               
+        
+//To HERE!!!!!!!!!!!
                 
                 
                 
@@ -113,16 +162,13 @@ class ViewController: UIViewController {
 //                do {
 //                    if let loadedStrings = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dataTest) as? [String] {
 //                        var savedArray = loadedStrings
-//                    }
-//                } catch {
-//                    print("Couldn't read file.")
-//                }
-                
+                    
+    }
             
-            } else {
-                // Fallback on earlier versions
-            }
-            
+//            } else {
+//                // Fallback on earlier versions
+//            }
+        
 
 
         
@@ -135,9 +181,9 @@ class ViewController: UIViewController {
 //                let gitData = try decoder.decode(MemeModel.self, from: data)
 //                print(gitData.name)
 //
-//            } catch let err {
-//                print("Err", err)
-//            }
+//          } catch let err {
+//               print("Err", err)
+//           }
 //            }.resume()
 //
 //

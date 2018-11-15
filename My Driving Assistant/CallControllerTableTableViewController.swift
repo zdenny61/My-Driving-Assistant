@@ -70,122 +70,195 @@ class CallControllerTableTableViewController: UITableViewController {
         PhoneNumbers = ["7857669375","7857669375", "810", "Error", "Error"]
         
         
-//Name File
-        let fileName = "EmergencyContactsID"
-        let dir = try? FileManager.default.url(for: .documentDirectory,
-                                               in: .userDomainMask, appropriateFor: nil, create: true)
+        print(cars.debugDescription)
         
-        // If the directory was found, we write a file to it and read it back
-        if let fileURL = dir?.appendingPathComponent(fileName).appendingPathExtension("txt") {
-            
-            
-            
-            
-            
-            
-            
-            
+////Name File
+//        let fileName = "EmergencyContactsID"
+//        let dir = try? FileManager.default.url(for: .documentDirectory,
+//                                               in: .userDomainMask, appropriateFor: nil, create: true)
 //
-//                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                    let context = appDelegate.persistentContainer.viewContext
+//        // If the directory was found, we write a file to it and read it back
+//        if let fileURL = dir?.appendingPathComponent(fileName).appendingPathExtension("txt") {
 //
 //
-////                    let entity = NSEntityDescription.entity(forEntityName: "FirstTime", in: context)
-////                    let newContact = NSManagedObject(entity: entity!, insertInto: context)
+//
+//
+//
+//
+//
+//
+////
+////                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+////                    let context = appDelegate.persistentContainer.viewContext
+////
+////
+//////                    let entity = NSEntityDescription.entity(forEntityName: "FirstTime", in: context)
+//////                    let newContact = NSManagedObject(entity: entity!, insertInto: context)
+//////
+//////
+//////
+//////
+//////                    newContact.setValue(false, forKey: "first")
+//////
+//////
+////
+////                    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FirstTime")
+////
+////                    //request.predicate = NSPredicate(format: "age = %@", "12")
+////                    request.returnsObjectsAsFaults = false
+////                    do {
+////                        let result = try context.fetch(request)
+////                        for data in result as! [NSManagedObject] {
+////                            print(data.value(forKey: "first") as! String)
 ////
 ////
 ////
+////                        }
 ////
-////                    newContact.setValue(false, forKey: "first")
+////                    } catch {
 ////
+////                        print("Failed")
+////                    }
 ////
 //
-//                    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FirstTime")
-//
-//                    //request.predicate = NSPredicate(format: "age = %@", "12")
-//                    request.returnsObjectsAsFaults = false
-//                    do {
-//                        let result = try context.fetch(request)
-//                        for data in result as! [NSManagedObject] {
-//                            print(data.value(forKey: "first") as! String)
 //
 //
+//            //Uncomment to write the file for names
 //
-//                        }
+////            // Write to the file named Test
+////            let outString = "Emergency 911,<< Contact 1 Slide Left,<< Contact 2 Slide Left,<< Contact 3 Slide Left,<< Contact 4 Slide Left"
 //
-//                    } catch {
+////            do {
+////                try outString.write(to: fileURL, atomically: true, encoding: .utf8)
+////            } catch {
+////                print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+////            }
 //
-//                        print("Failed")
-//                    }
-//
-            
-            
-            
-            //Uncomment to write the file for names
-            
-//            // Write to the file named Test
-//            let outString = "Emergency 911,<< Contact 1 Slide Left,<< Contact 2 Slide Left,<< Contact 3 Slide Left,<< Contact 4 Slide Left"
-            
+//            // Then reading it back from the file
+//            var inString = ""
 //            do {
-//                try outString.write(to: fileURL, atomically: true, encoding: .utf8)
+//                inString = try String(contentsOf: fileURL)
 //            } catch {
-//                print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+//                print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
 //            }
+//            print("ID's: \(inString)")
+//
+//            cars = inString.components(separatedBy: ",")
+//
+//            //Save the data
+//            //Used for saving
+//            //encode data that is currently in var data
+//
+//
+//
+//
+//
+//
+//
+//
+//            print(cars)
+//        }
+//
+        
+        let defaults = UserDefaults.standard
+
+        
+        if let LoadedFirst = defaults.string(forKey: usersData.userFirstTime){
+            print("Im in loaded")
             
-            // Then reading it back from the file
-            var inString = ""
-            do {
-                inString = try String(contentsOf: fileURL)
-            } catch {
-                print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-            }
-            print("ID's: \(inString)")
             
-            cars = inString.components(separatedBy: ",")
+        }else{
             
-            print(cars)
+            print("this is being ran!")
+            
+          //saving names first time
+            defaults.set(cars, forKey: usersData.userContactsNames)
+            print("reset names")
+            
+        
+            
+           //saving numbers first time
+            defaults.set(PhoneNumbers, forKey: usersData.userContactsNumbers)
+            print("reset numbers")
+            
+            print("Im in not loaded")
+             defaults.set("loaded", forKey: usersData.userFirstTime)
         }
         
         
-//Number file
         
-        let fileNameNum = "EmergencyContactsNumbers"
-        let dirNum = try? FileManager.default.url(for: .documentDirectory,
-                                               in: .userDomainMask, appropriateFor: nil, create: true)
         
-        // If the directory was found, we write a file to it and read it back
-        if let fileURL = dirNum?.appendingPathComponent(fileNameNum).appendingPathExtension("txt") {
+        
+ //Names Handelers
+//        let stringNames = defaults.stringArray(forKey: usersData.userContactsNames)
+//        print(stringNames)
+        
+        if let stringNames = defaults.stringArray(forKey: usersData.userContactsNames) {
+            print(stringNames) // Some String Value
             
+            cars = stringNames//.components(separatedBy: ",")
+            print("loaded names")
+            print(stringNames)
             
-            //Uncomment to write the file for numbers
-            
-            
-//                        // Write to the file named Test
-//                        let outString = "7857669375,Error,Error,Error,Error"
-           
-//                        do {
-//                            try outString.write(to: fileURL, atomically: true, encoding: .utf8)
-//                        } catch {
-//                            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-//                        }
-            
-            // Then reading it back from the file
-            var inString = ""
-            do {
-                inString = try String(contentsOf: fileURL)
-            } catch {
-                print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-            }
-            print("Numbers's: \(inString)")
-            
-            
-            PhoneNumbers = inString.components(separatedBy: ",")
-            
-            print(PhoneNumbers)
-            
-            
+        }else{
+            print("names skiped")
             
         }
+        
+        
+//Numbers Handelers
+        // Setting and saving userdefaults for the contact numbers data
+       
+        
+        
+        
+        if let stringNumbers = defaults.stringArray(forKey: usersData.userContactsNumbers) {
+            print(stringNumbers) // Some String Value
+            
+            PhoneNumbers = stringNumbers//.components(separatedBy: ",")
+            print("loaded numbers")
+            print(stringNumbers)
+        }
+//
+////Number file
+//
+//        let fileNameNum = "EmergencyContactsNumbers"
+//        let dirNum = try? FileManager.default.url(for: .documentDirectory,
+//                                               in: .userDomainMask, appropriateFor: nil, create: true)
+//
+//        // If the directory was found, we write a file to it and read it back
+//        if let fileURL = dirNum?.appendingPathComponent(fileNameNum).appendingPathExtension("txt") {
+//
+//
+//            //Uncomment to write the file for numbers
+//
+//
+////                        // Write to the file named Test
+////                        let outString = "7857669375,Error,Error,Error,Error"
+//
+////                        do {
+////                            try outString.write(to: fileURL, atomically: true, encoding: .utf8)
+////                        } catch {
+////                            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+////                        }
+//
+//            // Then reading it back from the file
+//            var inString = ""
+//            do {
+//                inString = try String(contentsOf: fileURL)
+//            } catch {
+//                print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+//            }
+//            print("Numbers's: \(inString)")
+//
+//
+//            PhoneNumbers = inString.components(separatedBy: ",")
+//
+//            print(PhoneNumbers)
+//
+//
+//
+//        }
         
         
 //        var data =
@@ -397,60 +470,75 @@ class CallControllerTableTableViewController: UITableViewController {
         
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        
+        defaults.set(cars, forKey: usersData.userContactsNames)
+        defaults.set(PhoneNumbers, forKey: usersData.userContactsNumbers)
+        
+        print("view closed ")
+        
+    }
     
     func updateFiles () -> Void{
         
+        print("updating files")
+        let defaults = UserDefaults.standard
         
-        //Name File
-        let fileName = "EmergencyContactsID"
-        let dir = try? FileManager.default.url(for: .documentDirectory,
-                                               in: .userDomainMask, appropriateFor: nil, create: true)
+        defaults.set(cars, forKey: usersData.userContactsNames)
+        defaults.set(PhoneNumbers, forKey: usersData.userContactsNumbers)
         
-        // If the directory was found, we write a file to it and read it back
-        if let fileURL = dir?.appendingPathComponent(fileName).appendingPathExtension("txt") {
-            
-                        // Write to the file named Test
-                        //let outString = "Emergency 911,<< Contact 1 Slide Left,<< Contact 2 Slide Left,<< Contact 3 Slide Left,<< Contact 4 Slide Left"
-                let outString = cars.joined(separator: ",")
-                        do {
-                            try outString.write(to: fileURL, atomically: true, encoding: .utf8)
-                        } catch {
-                            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-                        }
-            
-//            // Then reading it back from the file
-//            var inString = ""
-//            do {
-//                inString = try String(contentsOf: fileURL)
-//            } catch {
-//                print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-//            }
-//            print("ID's: \(inString)")
+        
 //
-//            cars = inString.components(separatedBy: ",")
+//        //Name File
+//        let fileName = "EmergencyContactsID"
+//        let dir = try? FileManager.default.url(for: .documentDirectory,
+//                                               in: .userDomainMask, appropriateFor: nil, create: true)
 //
-//            print(cars)
-        }
-        
-        
-        //Number file
-        
-        let fileNameNum = "EmergencyContactsNumbers"
-        let dirNum = try? FileManager.default.url(for: .documentDirectory,
-                                                  in: .userDomainMask, appropriateFor: nil, create: true)
-        
-        // If the directory was found, we write a file to it and read it back
-        if let fileURL = dirNum?.appendingPathComponent(fileNameNum).appendingPathExtension("txt") {
-            
-                                    // Write to the file named Test
-                                   // let outString = "7857669375,Error,Error,Error,Error"
-                          let outString = PhoneNumbers.joined(separator: ",")
-                                    do {
-                                        try outString.write(to: fileURL, atomically: true, encoding: .utf8)
-                                    } catch {
-                                        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-                                    }
+//        // If the directory was found, we write a file to it and read it back
+//        if let fileURL = dir?.appendingPathComponent(fileName).appendingPathExtension("txt") {
+//
+//                        // Write to the file named Test
+//                        //let outString = "Emergency 911,<< Contact 1 Slide Left,<< Contact 2 Slide Left,<< Contact 3 Slide Left,<< Contact 4 Slide Left"
+//                let outString = cars.joined(separator: ",")
+//                        do {
+//                            try outString.write(to: fileURL, atomically: true, encoding: .utf8)
+//                        } catch {
+//                            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+//                        }
+//
+////            // Then reading it back from the file
+////            var inString = ""
+////            do {
+////                inString = try String(contentsOf: fileURL)
+////            } catch {
+////                print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+////            }
+////            print("ID's: \(inString)")
+////
+////            cars = inString.components(separatedBy: ",")
+////
+////            print(cars)
+//        }
+//
+//
+//        //Number file
+//
+//        let fileNameNum = "EmergencyContactsNumbers"
+//        let dirNum = try? FileManager.default.url(for: .documentDirectory,
+//                                                  in: .userDomainMask, appropriateFor: nil, create: true)
+//
+//        // If the directory was found, we write a file to it and read it back
+//        if let fileURL = dirNum?.appendingPathComponent(fileNameNum).appendingPathExtension("txt") {
+//
+//                                    // Write to the file named Test
+//                                   // let outString = "7857669375,Error,Error,Error,Error"
+//                          let outString = PhoneNumbers.joined(separator: ",")
+//                                    do {
+//                                        try outString.write(to: fileURL, atomically: true, encoding: .utf8)
+//                                    } catch {
+//                                        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+//                                    }
 //
 //            // Then reading it back from the file
 //            var inString = ""
@@ -469,7 +557,7 @@ class CallControllerTableTableViewController: UITableViewController {
             
             
             
-        }
+       // }
         
     }
     
