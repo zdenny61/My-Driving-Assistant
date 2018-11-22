@@ -17,14 +17,17 @@ private var currentLocation: CLLocation?
 
 class LocationController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
      var locationManager:CLLocationManager!
+    
+    
     @IBOutlet weak var MapView: MKMapView!
+     var mapView:MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-      
+        MapView.delegate = self
+//      MapView.delegate = self
         
         
         // Call for Search to start
@@ -85,6 +88,16 @@ class LocationController: UIViewController, CLLocationManagerDelegate, MKMapView
         print("Error \(error)")
     }
     
+//Detect when pin is touched
+//    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView)
+//    {
+//        print("called")
+//        if let annotationTitle = view.annotation?.title
+//        {
+//            print("User tapped on annotation with title: \(annotationTitle!)")
+//        }
+//    }
+    
     
     func searchInMap() {
         
@@ -108,19 +121,96 @@ class LocationController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     //Add Pins to locations matching search string
     func addPinToMapView(title: String?, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
-        if let title = title {
-            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = location
-            annotation.title = title
+//        if let title = title {
+//            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//            let annotation = MKPointAnnotation()
+//            annotation.coordinate = location
+//            annotation.title = title
+        
+            
+//            if annotation is MKUserLocation { return nil }
+            if #available(iOS 11.0, *) {
+                
+                if let title = title {
+                    let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = location
+                    annotation.title = title
+                
+                    
+                    var annotationView = MKMarkerAnnotationView()
+                    //var reuseIdentifier: String? { get }
+                    annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+                    
+                    annotationView.canShowCallout = true
+                    annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
+                    
+                    
+                    MapView.addAnnotation(annotation)
+                }
+            
+                    
+                    
+//                var annotationView = MKMarkerAnnotationView()
+//                //var reuseIdentifier: String? { get }
+//                annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+////                annotationView.canShowCallout = true
+////                annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
+//
+//                //pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+//                annotationView.canShowCallout = true
+//
+//                let rightButton: AnyObject! = UIButton(type: UIButton.ButtonType.detailDisclosure)
+//                annotationView.rightCalloutAccessoryView = rightButton as? UIView
+//
+                
+                //print("called")
+            } else {
+                // Fallback on earlier versions
+            }
+          // var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "AnnotationIdentifier") as? MKPinAnnotationView
+            //var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: restorationIdentifier ?? )
             
             
-            MapView.addAnnotation(annotation)
+           
+//            annotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+//            annotationView?.canShowCallout = true
+//            annotationView?.rightCalloutAccessoryView = UIButton(type: .infoLight)
+//
+//            MapView.addAnnotation(annotation)
+//        }
+   }
+    
+    
+    
+//    func getDirections(){
+//        guard let selectedPin = selectedPin else { return }
+//        let mapItem = MKMapItem(placemark: selectedPin)
+//        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+//        mapItem.openInMapsWithLaunchOptions(launchOptions)
+//
+//        print ("GET DIRECTION")
+//    }
+   
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+       
+        print("worked!")
+        
+        if annotation is MKUserLocation { return nil }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "Pin") as? MKPinAnnotationView
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+            annotationView?.canShowCallout = true
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .infoLight)
+        } else {
+            annotationView?.annotation = annotation
         }
+        
+        return annotationView
     }
     
     
-   
     
     
 }

@@ -420,21 +420,23 @@ class CallControllerTableTableViewController: UITableViewController {
             let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
                 //self.cars.remove(at: indexPath.row)
                
-                if indexPath.row == 1{
-                    self.cars[indexPath.row] = "<< Contact 1 Slide Left"
-                    self.PhoneNumbers[indexPath.row] = "Error"
-                    
-                }else if indexPath.row == 2{
-                    self.cars[indexPath.row] = "<< Contact 2 Slide Left"
-                    self.PhoneNumbers[indexPath.row] = "Error"
-                }else if indexPath.row == 3{
-                    self.cars[indexPath.row] = "<< Contact 3 Slide Left"
-                    self.PhoneNumbers[indexPath.row] = "Error"
-                }else if indexPath.row == 4{
-                    self.cars[indexPath.row] = "<< Contact 4 Slide Left"
-                    self.PhoneNumbers[indexPath.row] = "Error"
-                }
-                    
+                self.cars.remove(at: indexPath.row)
+                self.PhoneNumbers.remove(at: indexPath.row)
+//                if indexPath.row == 1{
+//                    self.cars[indexPath.row] = "<< Contact 1 Slide Left"
+//                    self.PhoneNumbers[indexPath.row] = "Error"
+//
+//                }else if indexPath.row == 2{
+//                    self.cars[indexPath.row] = "<< Contact 2 Slide Left"
+//                    self.PhoneNumbers[indexPath.row] = "Error"
+//                }else if indexPath.row == 3{
+//                    self.cars[indexPath.row] = "<< Contact 3 Slide Left"
+//                    self.PhoneNumbers[indexPath.row] = "Error"
+//                }else if indexPath.row == 4{
+//                    self.cars[indexPath.row] = "<< Contact 4 Slide Left"
+//                    self.PhoneNumbers[indexPath.row] = "Error"
+//                }
+                
                 tableView.reloadData()
                 self.updateFiles()
             })
@@ -484,6 +486,8 @@ class CallControllerTableTableViewController: UITableViewController {
         
         print("updating files")
         let defaults = UserDefaults.standard
+        
+        
         
         defaults.set(cars, forKey: usersData.userContactsNames)
         defaults.set(PhoneNumbers, forKey: usersData.userContactsNumbers)
@@ -616,5 +620,47 @@ class CallControllerTableTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+//Add New Contacts
+    @IBAction func addNewContactPush(_ sender: Any) {
+       
+        var newName = ""
+        var newNumber = ""
+        
+        
+        
+        let alert = UIAlertController(title: "", message: "Add Contact", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "Enter Contacts Name"
+        })
+        alert.addTextField(configurationHandler: { (textField2) in
+            textField2.placeholder = "Enter Contact Phone Number"
+        })
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+            
+            case .cancel:
+                print("cancel")
+                
+                
+            case .default:
+                
+                self.cars.append(alert.textFields!.first!.text!)
+                self.PhoneNumbers.append(alert.textFields![1].text!)
+                self.tableView.reloadData()
+                
+            case .destructive: break
+                
+            }}))
+        present(alert, animated: true)
+      
+        
+    }
+    
+    
+    
+    
 
 }

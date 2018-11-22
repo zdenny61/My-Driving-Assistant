@@ -384,11 +384,18 @@ Expiration Date: 01/27/1997</string>
         <!--Documents Controller-->
         <scene sceneID="Wgx-Ce-kZ7">
             <objects>
-                <viewController id="FRQ-0y-Iqt" customClass="DocumentsController" customModule="My_Driving_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="documentView" id="FRQ-0y-Iqt" customClass="DocumentsController" customModule="My_Driving_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="ecI-bf-rZY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmv-th-o29">
+                                <rect key="frame" x="283" y="14" width="35" height="35"/>
+                                <state key="normal" image="Pluse.png"/>
+                                <connections>
+                                    <action selector="addNewDocumentPush:" destination="FRQ-0y-Iqt" eventType="touchUpInside" id="JkQ-bi-IRa"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Qr-dx-xam">
                                 <rect key="frame" x="0.0" y="58" width="375" height="609"/>
                                 <color key="backgroundColor" red="0.26765921711921692" green="0.59671926498413086" blue="0.96866947412490845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -454,9 +461,11 @@ Expiration Date: 01/27/1997</string>
                             <constraint firstItem="mnZ-bk-N7A" firstAttribute="top" secondItem="Pp4-6h-ZbN" secondAttribute="top" id="MZL-Kx-3Nn"/>
                             <constraint firstItem="7WM-MO-xiP" firstAttribute="bottom" secondItem="mnZ-bk-N7A" secondAttribute="bottom" id="Q8S-7q-KhZ"/>
                             <constraint firstItem="7WM-MO-xiP" firstAttribute="top" secondItem="ecI-bf-rZY" secondAttribute="top" id="SXA-f0-Xbn"/>
+                            <constraint firstItem="1Qr-dx-xam" firstAttribute="top" secondItem="Hmv-th-o29" secondAttribute="bottom" constant="9" id="Ttq-Ds-eoN"/>
                             <constraint firstItem="mnZ-bk-N7A" firstAttribute="trailing" secondItem="1Qr-dx-xam" secondAttribute="trailing" id="cPg-zd-JaD"/>
                             <constraint firstAttribute="trailing" secondItem="7WM-MO-xiP" secondAttribute="trailing" id="hwq-Wy-YpP"/>
                             <constraint firstItem="Pp4-6h-ZbN" firstAttribute="top" secondItem="GFM-v7-6OB" secondAttribute="top" id="nXg-x2-Qua"/>
+                            <constraint firstItem="Hmv-th-o29" firstAttribute="leading" secondItem="GFM-v7-6OB" secondAttribute="trailing" constant="51" id="ntJ-zN-ltm"/>
                             <constraint firstItem="1Qr-dx-xam" firstAttribute="bottom" secondItem="7WM-MO-xiP" secondAttribute="bottom" id="owf-H8-fci"/>
                             <constraint firstItem="mnZ-bk-N7A" firstAttribute="top" secondItem="jt1-RP-p2z" secondAttribute="top" id="pzu-qm-gIe"/>
                             <constraint firstItem="jt1-RP-p2z" firstAttribute="trailing" secondItem="GFM-v7-6OB" secondAttribute="trailing" constant="143" id="r0F-w6-EL7"/>
@@ -597,6 +606,11 @@ Expiration Date: 01/27/1997</string>
                         <barButtonItem key="leftBarButtonItem" title="Back" id="gPA-Nd-vQZ">
                             <connections>
                                 <action selector="backButtonPressedWithSender:" destination="del-6c-u0L" id="ybp-i2-yrn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Pluse.png" id="Sje-9z-otx">
+                            <connections>
+                                <action selector="addNewContactPush:" destination="del-6c-u0L" id="bEa-bm-5Ud"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -890,6 +904,7 @@ Required (another car, jumper cables)
     </scenes>
     <resources>
         <image name="Emergency-Button.png" width="640" height="240"/>
+        <image name="Pluse.png" width="35" height="35"/>
         <image name="White-Button.png" width="600" height="169"/>
         <image name="blue-circle-button.png" width="600" height="600"/>
     </resources>
@@ -898,6 +913,6 @@ Required (another car, jumper cables)
         <segue reference="W4m-Zv-hq6"/>
         <segue reference="d4L-cF-Tt7"/>
         <segue reference="HHW-2Q-vI3"/>
-        <segue reference="hwZ-lY-91j"/>
+        <segue reference="bKv-55-PpB"/>
     </inferredMetricsTieBreakers>
 </document>

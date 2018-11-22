@@ -30,6 +30,9 @@ class lookingViewController: UIViewController {
         docImageView.image = UIImage(data: docData[DocumentsController().gettouchIndex()].image as Data)
         titleLb.text = "     " + docData[DocumentsController().gettouchIndex()].name
         
+        docInfoView.text = "Name On Document: " + docData[DocumentsController().gettouchIndex()].nameOnDoc + "\n" + "\n" + "Expiration Date Of Document: " + docData[DocumentsController().gettouchIndex()].expDate
+        
+    
         
        // print(data[1].name)
         
@@ -43,8 +46,10 @@ class lookingViewController: UIViewController {
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Document Type"
         }
+//Cancel Action
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
             (action : UIAlertAction!) -> Void in })
+//Save Action
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let docNameTextField = alertController.textFields![0] as UITextField
             let nameTextField = alertController.textFields![1] as UITextField
@@ -77,6 +82,46 @@ class lookingViewController: UIViewController {
             
             
         })
+//Delete action
+        let deleteAction = UIAlertAction(title: "Delete", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            
+            data.remove(at: touchIndex)
+            
+//Save the data
+            //Used for saving
+            //encode data that is currently in var data
+            let encodedData = try? JSONEncoder().encode(data)
+            
+            
+            // Setting and saving userdefaults for the usersDoc data
+            let defaults = UserDefaults.standard
+            defaults.set(encodedData, forKey: usersData.usersDoc)
+            
+            
+           //Let user know data was deleted and then go to document controller
+            let deletedAlertController = UIAlertController(title: "Document Deleted", message: "Your doument has been deleted successfully!", preferredStyle: UIAlertController.Style.alert)
+            //Ok Action for delete alert
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                
+                
+                //Push to lookingView
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "documentView")
+                    
+                    else {
+                        print("View controller lookingView not found")
+                        return
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+                self.present(vc, animated: true, completion: nil)
+                
+                
+            })
+            
+            deletedAlertController.addAction(okAction)
+            
+            self.present(deletedAlertController,animated: true,completion: nil)
+            
+        })
         
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Name On Document"
@@ -89,6 +134,7 @@ class lookingViewController: UIViewController {
         
         alertController.addAction(cancelAction)
         alertController.addAction(saveAction)
+        alertController.addAction(deleteAction)
         
         self.present(alertController, animated: true, completion: nil)
             

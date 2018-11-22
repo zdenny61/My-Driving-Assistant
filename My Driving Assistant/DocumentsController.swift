@@ -99,6 +99,9 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
         }
         
         
+      //To add new document data
+        //data.append(MemeModel(image: imageData as! NSData, name: "Test Idea", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"))
+        
         
         
     }
@@ -134,6 +137,61 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
     
    
     
+    @IBAction func addNewDocumentPush(_ sender: Any) {
+   
+    
+    
+    
+    
+        //To add new document data
+        
+    
+        var newName = ""
+        var newNumber = ""
+        
+        
+        
+        let alert = UIAlertController(title: "", message: "Add Contact", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "Enter Type Of Document"
+        })
+        alert.addTextField(configurationHandler: { (textField2) in
+            textField2.placeholder = "Enter Name On Document"
+        })
+        alert.addTextField(configurationHandler: { (textField3) in
+            textField3.placeholder = "Enter Expiration Date"
+        })
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+                
+            case .cancel:
+                print("cancel")
+                
+                
+            case .default:
+                
+                data.append(MemeModel(image: imageData as! NSData, name: alert.textFields!.first!.text!, nameOnDoc: alert.textFields![1].text!, expDate: alert.textFields![2].text!))
+                
+                
+                let encodedData = try? JSONEncoder().encode(data)
+                
+                
+                // Setting and saving userdefaults for the usersDoc data
+                let defaults = UserDefaults.standard
+                defaults.set(encodedData, forKey: usersData.usersDoc)
+                
+                self.collectionView.reloadData()
+                
+                
+            case .destructive: break
+                
+            }}))
+        present(alert, animated: true)
+        
+    
+    
+    }
     
     
     

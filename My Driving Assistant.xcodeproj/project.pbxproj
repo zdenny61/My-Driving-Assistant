@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F018BCE21A61AAA00480FE7 /* Pluse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F018BCD21A61A6000480FE7 /* Pluse.png */; };
 		0F15BFC22199274200DFA452 /* CallControllerTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F15BFC12199274200DFA452 /* CallControllerTableTableViewController.swift */; };
 		0F15BFC42199603200DFA452 /* EmergencyContactsID.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0F15BFC32199603200DFA452 /* EmergencyContactsID.txt */; };
 		0F33D6692198EC4600092AA5 /* White-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D6682198EA5B00092AA5 /* White-Button.png */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F018BCD21A61A6000480FE7 /* Pluse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pluse.png; sourceTree = "<group>"; };
 		0F15BFC12199274200DFA452 /* CallControllerTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallControllerTableTableViewController.swift; sourceTree = "<group>"; };
 		0F15BFC32199603200DFA452 /* EmergencyContactsID.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = EmergencyContactsID.txt; sourceTree = "<group>"; };
 		0F33D6682198EA5B00092AA5 /* White-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "White-Button.png"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				0F6E7778219A899800BCE3AF /* Models */,
 				0F33D66A2198F35300092AA5 /* Document-Logo.png */,
 				0F33D66E2198F65200092AA5 /* Emergency-Button.png */,
+				0F018BCD21A61A6000480FE7 /* Pluse.png */,
 				0F69E6BA216D4F2D006D56EA /* Images */,
 				0F69E693216D4D92006D56EA /* Assets.xcassets */,
 				0F69E695216D4D92006D56EA /* LaunchScreen.storyboard */,
@@ -328,6 +331,7 @@
 				0F69E697216D4D92006D56EA /* LaunchScreen.storyboard in Resources */,
 				0F33D66F2198F65500092AA5 /* Emergency-Button.png in Resources */,
 				0F6E777B219A899900BCE3AF /* Models in Resources */,
+				0F018BCE21A61AAA00480FE7 /* Pluse.png in Resources */,
 				0F69E694216D4D92006D56EA /* Assets.xcassets in Resources */,
 				0F15BFC42199603200DFA452 /* EmergencyContactsID.txt in Resources */,
 				0F69E68F216D4D90006D56EA /* Main.storyboard in Resources */,
