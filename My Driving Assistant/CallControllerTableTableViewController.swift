@@ -3,6 +3,7 @@
 //  My Driving Assistant
 //
 //  Created by Zachary Denny on 11/11/18.
+//  Updated by Zachary Denny on 12/22/18.
 //  Copyright © 2018 Denny Homes. All rights reserved.
 //
 
@@ -649,7 +650,13 @@ class CallControllerTableTableViewController: UITableViewController {
                 
                 self.cars.append(alert.textFields!.first!.text!)
                 self.PhoneNumbers.append(alert.textFields![1].text!)
+                
                 self.tableView.reloadData()
+              //Save the new contact
+                let defaults = UserDefaults.standard
+                
+                defaults.set(self.cars, forKey: usersData.userContactsNames)
+                defaults.set(self.PhoneNumbers, forKey: usersData.userContactsNumbers)
                 
             case .destructive: break
                 

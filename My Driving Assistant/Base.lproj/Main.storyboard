@@ -348,20 +348,37 @@ Expiration Date: 01/27/1997</string>
                                     <action selector="pushEdit:" destination="mCK-86-spm" eventType="touchUpInside" id="rjG-Z5-twY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap To Change Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP0-BI-l1g">
+                                <rect key="frame" x="16" y="71" width="343" height="321"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-lQ-Vko">
+                                <rect key="frame" x="16" y="71" width="343" height="321"/>
+                                <connections>
+                                    <action selector="changePhotoPush:" destination="mCK-86-spm" eventType="touchUpInside" id="m8a-FK-qLi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26765921710000001" green="0.59671926500000005" blue="0.96866947410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="FQt-tk-JhK" firstAttribute="top" secondItem="OeS-lQ-Vko" secondAttribute="bottom" constant="8" symbolic="YES" id="3o1-Vz-nBn"/>
                             <constraint firstItem="Rsz-QD-Cby" firstAttribute="trailing" secondItem="FQt-tk-JhK" secondAttribute="trailing" id="77a-xe-T7H"/>
                             <constraint firstItem="zEo-OY-nVk" firstAttribute="leading" secondItem="yf6-oD-Lx9" secondAttribute="trailing" constant="8" symbolic="YES" id="EIv-ri-cpv"/>
                             <constraint firstItem="Rsz-QD-Cby" firstAttribute="top" secondItem="yf6-oD-Lx9" secondAttribute="bottom" constant="8" symbolic="YES" id="FYl-gi-9tM"/>
                             <constraint firstAttribute="bottom" secondItem="FQt-tk-JhK" secondAttribute="bottom" constant="20" symbolic="YES" id="JEV-VN-L7M"/>
+                            <constraint firstItem="OeS-lQ-Vko" firstAttribute="top" secondItem="Rsz-QD-Cby" secondAttribute="top" id="JLF-6N-tuP"/>
                             <constraint firstItem="FQt-tk-JhK" firstAttribute="top" secondItem="Rsz-QD-Cby" secondAttribute="bottom" constant="8" symbolic="YES" id="KgE-sc-gyG"/>
                             <constraint firstItem="69O-rq-n50" firstAttribute="leading" secondItem="Rsz-QD-Cby" secondAttribute="leading" id="QVf-JZ-W5M"/>
                             <constraint firstItem="yf6-oD-Lx9" firstAttribute="centerY" secondItem="zEo-OY-nVk" secondAttribute="centerY" id="Yyw-dT-UT4"/>
                             <constraint firstItem="yf6-oD-Lx9" firstAttribute="centerX" secondItem="Rsz-QD-Cby" secondAttribute="centerX" id="f0H-wd-9UI"/>
+                            <constraint firstItem="OeS-lQ-Vko" firstAttribute="trailing" secondItem="Rsz-QD-Cby" secondAttribute="trailing" id="fhZ-a2-64X"/>
                             <constraint firstItem="zEo-OY-nVk" firstAttribute="top" secondItem="enk-IE-xrg" secondAttribute="top" constant="6" id="inZ-VG-7aY"/>
                             <constraint firstItem="zEo-OY-nVk" firstAttribute="trailing" secondItem="EtI-TZ-JUM" secondAttribute="trailingMargin" id="kPy-tP-hmi"/>
                             <constraint firstItem="zEo-OY-nVk" firstAttribute="trailing" secondItem="Rsz-QD-Cby" secondAttribute="trailing" id="nAQ-br-eFs"/>
+                            <constraint firstItem="OeS-lQ-Vko" firstAttribute="leading" secondItem="Rsz-QD-Cby" secondAttribute="leading" id="nyg-8M-qZD"/>
                             <constraint firstItem="Rsz-QD-Cby" firstAttribute="top" secondItem="69O-rq-n50" secondAttribute="bottom" constant="8" symbolic="YES" id="okr-MV-DhO"/>
                             <constraint firstItem="Rsz-QD-Cby" firstAttribute="leading" secondItem="FQt-tk-JhK" secondAttribute="leading" id="qRy-g8-rpJ"/>
                             <constraint firstItem="69O-rq-n50" firstAttribute="top" secondItem="yf6-oD-Lx9" secondAttribute="top" id="qdB-8D-Av1"/>
@@ -374,6 +391,7 @@ Expiration Date: 01/27/1997</string>
                     <connections>
                         <outlet property="docImageView" destination="Rsz-QD-Cby" id="16w-Vv-V9w"/>
                         <outlet property="docInfoView" destination="FQt-tk-JhK" id="Opi-O2-98U"/>
+                        <outlet property="tapToEditLB" destination="zP0-BI-l1g" id="S4d-lO-aTP"/>
                         <outlet property="titleLb" destination="yf6-oD-Lx9" id="qLN-mU-2GL"/>
                     </connections>
                 </viewController>

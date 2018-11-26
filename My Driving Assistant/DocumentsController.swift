@@ -3,6 +3,7 @@
 //  My Driving Assistant
 //
 //  Created by Zachary Denny on 10/22/18.
+//  Updated by Zachary Denny on 12/22/18.
 //  Copyright © 2018 Denny Homes. All rights reserved.
 //
 
@@ -61,7 +62,7 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.delegate = self
         collectionView.register(UINib.init(nibName: "MemeCell", bundle: nil), forCellWithReuseIdentifier: "MemeCell")
         
-        
+//Authenticat with FaceID/Touch ID
         //blur and authentication lb for securety method for doc viewing **set to false for production ver.
         blurView.isHidden = false
         AuthenticatLB.isHidden = false
@@ -69,7 +70,7 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
         print("hello there!.. You have clicked the touch ID")
         
         let myContext = LAContext()
-        let myLocalizedReasonString = "Biometric Authntication testing !! "
+        let myLocalizedReasonString = "Face/Touch ID (Biometric Authntication) for accessing secured documents."
         
         var authError: NSError?
         if #available(iOS 8.0, macOS 10.12.1, *) {
@@ -161,6 +162,7 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
         alert.addTextField(configurationHandler: { (textField3) in
             textField3.placeholder = "Enter Expiration Date"
         })
+        
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{

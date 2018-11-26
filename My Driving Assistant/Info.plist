@@ -4,29 +4,8 @@
 <dict>
 	<key></key>
 	<string></string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>This app uses Touch/Face ID to keep your data safe for you.</string>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-        <key>NSExceptionDomains</key>
-        <dict>
-            <key>http://www.denny-homes-server.com/testJ/test.json</key>
-            <dict>
-                <key>NSExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-                <key>NSIncludesSubdomains</key>
-                <true/>
-            </dict>
-        </dict>
-    </dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleDocumentTypes</key>
-	<array/>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -40,17 +19,40 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.4</string>
+	<string>1.4.1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>http://www.denny-homes-server.com/testJ/test.json</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>My Driving Assistant uses your camera to get the image of your driving document.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>This app uses Touch/Face ID to keep your data safe for you.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Will you allow this app to always know your location?</string>
 	<key>NSLocationUsageDescription</key>
 	<string>My Driving Assistant would like to use your location to locate shops around you only when app is open. </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app uses location to find where you are and locate reapir centers around you.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App uses your photo library to use a photo as a document image</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -3,16 +3,21 @@
 //  My Driving Assistant
 //
 //  Created by Zachary Denny on 11/12/18.
+//  Updated by Zachary Denny on 12/22/18.
 //  Copyright © 2018 Denny Homes. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class lookingViewController: UIViewController {
+class lookingViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var docImageView: UIImageView!
     @IBOutlet weak var titleLb: UILabel!
     @IBOutlet weak var docInfoView: UITextView!
+    @IBOutlet weak var tapToEditLB: UILabel!
+    
+    
+    var imagePickerController : UIImagePickerController!
     
     
    // var indexVal: Int?
@@ -142,6 +147,42 @@ class lookingViewController: UIViewController {
         
     }
     
+    @IBAction func changePhotoPush(_ sender: Any) {
+   
+        if imageData == #imageLiteral(resourceName: "DL-Logo.png").pngData(){
+            
+            
+            
+            
+        }
+        
+        
+        
+        imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .camera
+        present(imagePickerController, animated: true, completion: nil)
+    
+        
+        
+        
+    
+    
+    
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePickerController.dismiss(animated: true, completion: nil)
+//        self.docImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+
+//        guard let possibleImage = info[.originalImage] as? UIImage
+//            else {
+//                fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+//                return
+//        }
+//        newImage = possibleImage
+        
+    }
     
     
 
