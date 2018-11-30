@@ -40,6 +40,11 @@
 		0FA49E31219B7C8800D17B76 /* MemeModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA49E30219B7C8800D17B76 /* MemeModelClass.swift */; };
 		0FA49E33219B7DCB00D17B76 /* testSave.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FA49E32219B7DCB00D17B76 /* testSave.txt */; };
 		0FC635E221B0E35E003DF2C3 /* My Driving Assistant Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FC635E121B0E35E003DF2C3 /* My Driving Assistant Icon-1024.png */; };
+		0FC635E921B0ED30003DF2C3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC635E821B0ED30003DF2C3 /* NotificationCenter.framework */; };
+		0FC635EC21B0ED30003DF2C3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC635EB21B0ED30003DF2C3 /* TodayViewController.swift */; };
+		0FC635EF21B0ED30003DF2C3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC635ED21B0ED30003DF2C3 /* MainInterface.storyboard */; };
+		0FC635F321B0ED30003DF2C3 /* My Driving Assistant Now.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FC635E721B0ED30003DF2C3 /* My Driving Assistant Now.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0FC635F821B0EE81003DF2C3 /* Emergency-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F33D66E2198F65200092AA5 /* Emergency-Button.png */; };
 		0FEFFDDC219CD090003A82AB /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEFFDDB219CD090003A82AB /* keys.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +63,28 @@
 			remoteGlobalIDString = 0F69E685216D4D90006D56EA;
 			remoteInfo = "My Driving Assistant";
 		};
+		0FC635F121B0ED30003DF2C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F69E67E216D4D90006D56EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FC635E621B0ED30003DF2C3;
+			remoteInfo = "My Driving Assistant Now";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0FC635F721B0ED30003DF2C3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0FC635F321B0ED30003DF2C3 /* My Driving Assistant Now.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F018BCD21A61A6000480FE7 /* Pluse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pluse.png; sourceTree = "<group>"; };
@@ -100,6 +126,11 @@
 		0FA49E30219B7C8800D17B76 /* MemeModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModelClass.swift; sourceTree = "<group>"; };
 		0FA49E32219B7DCB00D17B76 /* testSave.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testSave.txt; sourceTree = "<group>"; };
 		0FC635E121B0E35E003DF2C3 /* My Driving Assistant Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My Driving Assistant Icon-1024.png"; sourceTree = "<group>"; };
+		0FC635E721B0ED30003DF2C3 /* My Driving Assistant Now.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "My Driving Assistant Now.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FC635E821B0ED30003DF2C3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		0FC635EB21B0ED30003DF2C3 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		0FC635EE21B0ED30003DF2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0FC635F021B0ED30003DF2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FEFFDDB219CD090003A82AB /* keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +158,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FC635E421B0ED30003DF2C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC635E921B0ED30003DF2C3 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,6 +175,7 @@
 				0F69E688216D4D90006D56EA /* My Driving Assistant */,
 				0F69E6A0216D4D92006D56EA /* My Driving AssistantTests */,
 				0F69E6AB216D4D92006D56EA /* My Driving AssistantUITests */,
+				0FC635EA21B0ED30003DF2C3 /* My Driving Assistant Now */,
 				0F69E687216D4D90006D56EA /* Products */,
 				0F8DA4C3217F93DE00551D18 /* Frameworks */,
 			);
@@ -147,6 +187,7 @@
 				0F69E686216D4D90006D56EA /* My Driving Assistant.app */,
 				0F69E69D216D4D92006D56EA /* My Driving AssistantTests.xctest */,
 				0F69E6A8216D4D92006D56EA /* My Driving AssistantUITests.xctest */,
+				0FC635E721B0ED30003DF2C3 /* My Driving Assistant Now.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,8 +253,19 @@
 			children = (
 				0F8DA4C6217F9D4200551D18 /* MapKit.framework */,
 				0F8DA4C4217F93DF00551D18 /* CoreLocation.framework */,
+				0FC635E821B0ED30003DF2C3 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0FC635EA21B0ED30003DF2C3 /* My Driving Assistant Now */ = {
+			isa = PBXGroup;
+			children = (
+				0FC635EB21B0ED30003DF2C3 /* TodayViewController.swift */,
+				0FC635ED21B0ED30003DF2C3 /* MainInterface.storyboard */,
+				0FC635F021B0ED30003DF2C3 /* Info.plist */,
+			);
+			path = "My Driving Assistant Now";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,10 +278,12 @@
 				0F69E682216D4D90006D56EA /* Sources */,
 				0F69E683216D4D90006D56EA /* Frameworks */,
 				0F69E684216D4D90006D56EA /* Resources */,
+				0FC635F721B0ED30003DF2C3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0FC635F221B0ED30003DF2C3 /* PBXTargetDependency */,
 			);
 			name = "My Driving Assistant";
 			productName = "My Driving Assistant";
@@ -272,13 +326,30 @@
 			productReference = 0F69E6A8216D4D92006D56EA /* My Driving AssistantUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0FC635E621B0ED30003DF2C3 /* My Driving Assistant Now */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FC635F421B0ED30003DF2C3 /* Build configuration list for PBXNativeTarget "My Driving Assistant Now" */;
+			buildPhases = (
+				0FC635E321B0ED30003DF2C3 /* Sources */,
+				0FC635E421B0ED30003DF2C3 /* Frameworks */,
+				0FC635E521B0ED30003DF2C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My Driving Assistant Now";
+			productName = "My Driving Assistant Now";
+			productReference = 0FC635E721B0ED30003DF2C3 /* My Driving Assistant Now.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0F69E67E216D4D90006D56EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Denny Homes";
 				TargetAttributes = {
@@ -298,6 +369,9 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 0F69E685216D4D90006D56EA;
 					};
+					0FC635E621B0ED30003DF2C3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 0F69E681216D4D90006D56EA /* Build configuration list for PBXProject "My Driving Assistant" */;
@@ -316,6 +390,7 @@
 				0F69E685216D4D90006D56EA /* My Driving Assistant */,
 				0F69E69C216D4D92006D56EA /* My Driving AssistantTests */,
 				0F69E6A7216D4D92006D56EA /* My Driving AssistantUITests */,
+				0FC635E621B0ED30003DF2C3 /* My Driving Assistant Now */,
 			);
 		};
 /* End PBXProject section */
@@ -355,6 +430,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FC635E521B0ED30003DF2C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC635EF21B0ED30003DF2C3 /* MainInterface.storyboard in Resources */,
+				0FC635F821B0EE81003DF2C3 /* Emergency-Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +482,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FC635E321B0ED30003DF2C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC635EC21B0ED30003DF2C3 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -410,6 +502,11 @@
 			isa = PBXTargetDependency;
 			target = 0F69E685216D4D90006D56EA /* My Driving Assistant */;
 			targetProxy = 0F69E6A9216D4D92006D56EA /* PBXContainerItemProxy */;
+		};
+		0FC635F221B0ED30003DF2C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FC635E621B0ED30003DF2C3 /* My Driving Assistant Now */;
+			targetProxy = 0FC635F121B0ED30003DF2C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -428,6 +525,14 @@
 				0F69E696216D4D92006D56EA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0FC635ED21B0ED30003DF2C3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FC635EE21B0ED30003DF2C3 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -552,6 +657,7 @@
 		0F69E6B2216D4D92006D56EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WT8F4364Z;
@@ -571,6 +677,7 @@
 		0F69E6B3216D4D92006D56EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WT8F4364Z;
@@ -669,6 +776,46 @@
 			};
 			name = Release;
 		};
+		0FC635F521B0ED30003DF2C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WT8F4364Z;
+				INFOPLIST_FILE = "My Driving Assistant Now/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Zachary.Driving.Denny.My-Driving-Assistant-Now";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0FC635F621B0ED30003DF2C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5WT8F4364Z;
+				INFOPLIST_FILE = "My Driving Assistant Now/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Zachary.Driving.Denny.My-Driving-Assistant-Now";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -704,6 +851,15 @@
 			buildConfigurations = (
 				0F69E6B8216D4D92006D56EA /* Debug */,
 				0F69E6B9216D4D92006D56EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FC635F421B0ED30003DF2C3 /* Build configuration list for PBXNativeTarget "My Driving Assistant Now" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FC635F521B0ED30003DF2C3 /* Debug */,
+				0FC635F621B0ED30003DF2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
