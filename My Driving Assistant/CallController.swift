@@ -3,6 +3,7 @@
 //  My Driving Assistant
 //
 //  Created by Zachary Denny on 10/22/18.
+//  Updated by Zachary Denny on 12/29/18.
 //  Copyright © 2018 Denny Homes. All rights reserved.
 //
 
@@ -61,6 +62,15 @@ class CallController: UIViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath)
         
         cell.textLabel?.text = cars[indexPath.row]
+        
+//        cell.backgroundView?.layer.cornerRadius = 8
+//        cell.backgroundView?.layer.masksToBounds = true
+//
+//        cell.layer.shadowOpacity = 0.18
+//        cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+//        cell.layer.shadowRadius = 2
+//        cell.layer.shadowColor = UIColor .black as! CGColor
+//        cell.layer.masksToBounds = false
         
         return cell
     }
@@ -128,6 +138,17 @@ class CallController: UIViewController {
             
             let row = indexPath.row
             cell.textLabel?.text = table1Data[row]
+            
+//            cell.backgroundView?.layer.cornerRadius = 8
+//            cell.backgroundView?.layer.masksToBounds = true
+//            
+//            cell.layer.shadowOpacity = 0.18
+//            cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+//            cell.layer.shadowRadius = 2
+//            cell.layer.shadowColor = UIColor .black as! CGColor
+//            cell.layer.masksToBounds = false
+            
+            
             
             return cell
         }

@@ -3,7 +3,7 @@
 //  My Driving Assistant
 //
 //  Created by Zachary Denny on 11/11/18.
-//  Updated by Zachary Denny on 12/22/18.
+//  Updated by Zachary Denny on 12/29/18.
 //  Copyright © 2018 Denny Homes. All rights reserved.
 //
 
@@ -67,8 +67,8 @@ class CallControllerTableTableViewController: UITableViewController {
         
         
         
-        cars = ["Emergency 911","Zachary Denny", "Alexis Hartley", "<< Contact 3 Slide Left", "<< Contact 4 Slide Left"]
-        PhoneNumbers = ["7857669375","7857669375", "810", "Error", "Error"]
+        cars = ["Emergency 911","John Appleseed", "<< Example Contact 2 Slide Left", "<< Example Contact 3 Slide Left", "<< Example Contact 4 Slide Left"]
+        PhoneNumbers = ["7857669375","7857669375", "Error", "Error", "Error"]
         
         
         print(cars.debugDescription)
@@ -301,6 +301,17 @@ class CallControllerTableTableViewController: UITableViewController {
         
         cell.textLabel?.text = cars[indexPath.row]
         cell.textLabel?.textAlignment = .center
+        
+        cell.textLabel?.text = cars[indexPath.row]
+        
+        cell.backgroundView?.layer.cornerRadius = 8
+        cell.backgroundView?.layer.masksToBounds = true
+        
+        cell.layer.shadowOpacity = 0.18
+        cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cell.layer.shadowRadius = 2
+        cell.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        cell.layer.masksToBounds = false
         
         return cell
     }

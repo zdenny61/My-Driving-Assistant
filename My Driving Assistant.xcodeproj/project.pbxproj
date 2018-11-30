@@ -39,6 +39,7 @@
 		0F8DA4C7217F9D4200551D18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8DA4C6217F9D4200551D18 /* MapKit.framework */; };
 		0FA49E31219B7C8800D17B76 /* MemeModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA49E30219B7C8800D17B76 /* MemeModelClass.swift */; };
 		0FA49E33219B7DCB00D17B76 /* testSave.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FA49E32219B7DCB00D17B76 /* testSave.txt */; };
+		0FC635E221B0E35E003DF2C3 /* My Driving Assistant Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FC635E121B0E35E003DF2C3 /* My Driving Assistant Icon-1024.png */; };
 		0FEFFDDC219CD090003A82AB /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEFFDDB219CD090003A82AB /* keys.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		0F8DA4C6217F9D4200551D18 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0FA49E30219B7C8800D17B76 /* MemeModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModelClass.swift; sourceTree = "<group>"; };
 		0FA49E32219B7DCB00D17B76 /* testSave.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testSave.txt; sourceTree = "<group>"; };
+		0FC635E121B0E35E003DF2C3 /* My Driving Assistant Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My Driving Assistant Icon-1024.png"; sourceTree = "<group>"; };
 		0FEFFDDB219CD090003A82AB /* keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 				0F8DA4BD217ECA0100551D18 /* HelpController.swift */,
 				0F8DA4B9217E722F00551D18 /* icon */,
 				0F69E6BC216D5166006D56EA /* blue-circle-button.png */,
+				0FC635E121B0E35E003DF2C3 /* My Driving Assistant Icon-1024.png */,
 				0F33D6682198EA5B00092AA5 /* White-Button.png */,
 				0F33D66B2198F35400092AA5 /* DL-Logo.png */,
 				0F6E777A219A899900BCE3AF /* MemeCell.swift */,
@@ -331,6 +334,7 @@
 				0F69E697216D4D92006D56EA /* LaunchScreen.storyboard in Resources */,
 				0F33D66F2198F65500092AA5 /* Emergency-Button.png in Resources */,
 				0F6E777B219A899900BCE3AF /* Models in Resources */,
+				0FC635E221B0E35E003DF2C3 /* My Driving Assistant Icon-1024.png in Resources */,
 				0F018BCE21A61AAA00480FE7 /* Pluse.png in Resources */,
 				0F69E694216D4D92006D56EA /* Assets.xcassets in Resources */,
 				0F15BFC42199603200DFA452 /* EmergencyContactsID.txt in Resources */,
