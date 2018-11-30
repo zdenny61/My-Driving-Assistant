@@ -315,7 +315,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FRQ-0y-Iqt" kind="show" id="W4m-Zv-hq6"/>
+                                    <segue destination="FRQ-0y-Iqt" kind="show" id="AAY-TN-A3F"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Doc View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf6-oD-Lx9">
@@ -928,7 +928,7 @@ Required (another car, jumper cables)
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XgV-i9-yb3"/>
-        <segue reference="W4m-Zv-hq6"/>
+        <segue reference="AAY-TN-A3F"/>
         <segue reference="d4L-cF-Tt7"/>
         <segue reference="HHW-2Q-vI3"/>
         <segue reference="bKv-55-PpB"/>

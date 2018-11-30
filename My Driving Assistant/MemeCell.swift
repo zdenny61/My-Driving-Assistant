@@ -1,17 +1,18 @@
 //
 //  MemeCell.swift
-//  MemeIQ
+//  My Driving Assistant
 //
-//  Created by Michael Rojas on 7/8/18.
-//  Copyright © 2018 Michael Rojas. All rights reserved.
+//  Created by Zachary Denny on 11/13/18.
+//  Updated by Zachary Denny on 12/29/18.
+//  Copyright © 2018 Denny Homes. All rights reserved.
 //
 
 import UIKit
 
 class MemeCell: UICollectionViewCell {
 
-    @IBOutlet var image: UIImageView!
-    @IBOutlet var name: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var name: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +20,12 @@ class MemeCell: UICollectionViewCell {
     }
     
     public func configure(with model: MemeModel) {
+        
+//Setting UI
+        //For rounding corners
+        image.layer.cornerRadius = 5.0
+        image.layer.masksToBounds = true
+        //Set cell Views UIImage and Lable
         image.image = UIImage(data: model.image as Data)
         name.text = model.name
     }

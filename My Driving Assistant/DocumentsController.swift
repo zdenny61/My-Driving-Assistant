@@ -3,18 +3,19 @@
 //  My Driving Assistant
 //
 //  Created by Zachary Denny on 10/22/18.
-//  Updated by Zachary Denny on 12/22/18.
+//  Updated by Zachary Denny on 12/29/18.
 //  Copyright © 2018 Denny Homes. All rights reserved.
 //
 
 import UIKit
 import LocalAuthentication
+import UserNotifications
 
 var touchIndex = 0
 let imageData = #imageLiteral(resourceName: "DL-Logo.png").pngData()
-var data: [MemeModel] = [MemeModel(image: imageData as! NSData, name: "ID", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
-                         MemeModel(image: imageData as! NSData, name: "Registration", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
-                         MemeModel(image: imageData as! NSData, name: "Insurence", nameOnDoc: "Zachary Denny", expDate: "01/27/1997")]
+var data: [MemeModel] = [MemeModel(image: imageData! as NSData, name: "ID", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+                        MemeModel(image: imageData! as NSData, name: "Registration", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+                        MemeModel(image: imageData! as NSData, name: "Insurence", nameOnDoc: "Zachary Denny", expDate: "01/27/1997")]
 
 
 class DocumentsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -56,6 +57,7 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         collectionView.dataSource = self
@@ -147,12 +149,12 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
         //To add new document data
         
     
-        var newName = ""
-        var newNumber = ""
+//        var newName = ""
+//        var newNumber = ""
         
         
         
-        let alert = UIAlertController(title: "", message: "Add Contact", preferredStyle: .alert)
+        let alert = UIAlertController(title: "", message: "Add Document", preferredStyle: .alert)
         alert.addTextField(configurationHandler: { (textField) in
             textField.placeholder = "Enter Type Of Document"
         })
@@ -160,7 +162,7 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
             textField2.placeholder = "Enter Name On Document"
         })
         alert.addTextField(configurationHandler: { (textField3) in
-            textField3.placeholder = "Enter Expiration Date"
+            textField3.placeholder = "Enter Expiration Date MM/DD/YYYY"
         })
         
         
@@ -173,7 +175,131 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
                 
             case .default:
                 
-                data.append(MemeModel(image: imageData as! NSData, name: alert.textFields!.first!.text!, nameOnDoc: alert.textFields![1].text!, expDate: alert.textFields![2].text!))
+                
+                
+                data.append(MemeModel(image: imageData! as NSData, name: alert.textFields!.first!.text!, nameOnDoc: alert.textFields![1].text!, expDate: alert.textFields![2].text!))
+                
+                
+                
+//Start Demo Code!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Make a new Expire Notification
+ //For DEMO!!
+//                let notification = UNMutableNotificationContent()
+//                notification.title = "Your document is about to expire!"
+//                notification.subtitle = alert.textFields!.first!.text! + " is about to expire soon"
+//                notification.body = "Click here and check out the date before it's to late!"
+//
+//                let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
+//                let request = UNNotificationRequest(identifier: alert.textFields!.first!.text!, content: notification, trigger: notificationTrigger)
+//
+//                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                //startIndex
+//                print( alert.textFields![2].text!.index(alert.textFields![2].text!.startIndex, offsetBy: 6) )
+//                //endIndex
+//                print((alert.textFields![2].text!).Index(encodedOffset: 10))
+//                //final number
+//                print(alert.textFields![2].text![( alert.textFields![2].text!.index(alert.textFields![2].text!.startIndex, offsetBy: 0) )..<(alert.textFields![2].text!.index(( alert.textFields![2].text!.index(alert.textFields![2].text!.startIndex, offsetBy: 0) ), offsetBy: 1))])
+//End Demo Code!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                
+                
+                
+                //Month
+                print(Int(alert.textFields![2].text!.split(separator: "/")[0]) ?? 00)
+                //Day
+                print(Int(alert.textFields![2].text!.split(separator: "/")[1]) ?? 00 )
+                //Year
+                print(Int(alert.textFields![2].text!.split(separator: "/")[2]) ?? 00 )
+                
+//Perform the expire calculations and set variables
+                var Month = (Int(alert.textFields![2].text!.split(separator: "/")[0]) ?? 00)
+                var Day = (Int(alert.textFields![2].text!.split(separator: "/")[1]) ?? 00 )
+                var Year = (Int(alert.textFields![2].text!.split(separator: "/")[2]) ?? 00 )
+                
+                //Do calculations for the expire date minus 7 days
+                if ((Day - 7 ) < 0) {
+                    
+                    //If Month is Jan, then subtract one from year and make month december else subtract 1 month
+                    if (Month == 1){
+                        Year -= 1
+                        Month = 12
+                    }else{
+                        Month -= 1
+                    }
+                    
+                    //Check/make days - 7 to go with last month
+                    if Month == 2{
+                        //Feb.
+                        Day = 28 - (7 - Day)
+                    }else if Month == 4{
+                        //April
+                         Day = 30 - (7 - Day)
+                    }else if Month == 6{
+                        //June
+                        Day = 30 - (7 - Day)
+                    }else if Month == 9{
+                        //Sep.
+                        Day = 30 - (7 - Day)
+                    }else if Month == 11{
+                        //Nov.
+                        Day = 30 - (7 - Day)
+                    }else {
+                        //Jan/March/May/July/Aug/Oct/Dec
+                        Day = 31 - (7 - Day)
+                    }
+                    
+                    
+                    
+                    
+                    
+                }else{
+                    
+                    //If current day is at least 7 days into month, 7 days will be subtracted normally
+                    Day -= 7
+                }
+                
+                print("")
+                print("Expire Minus 7 Days:")
+                print(Month)
+                print(Day)
+                print(Year)
+                
+                
+                
+ //Make a new Expire Notification
+ //For REAL
+                let calendar = Calendar.current
+                //set the date and time to display (8:00AM the notification goes off)
+                let components = DateComponents(year: Year, month: Month, day: Day, hour: 08, minute: 00)
+                
+                
+                let date = calendar.date(from: components)
+                let comp2 = calendar.dateComponents([.year,.month,.day,.hour,.minute], from: date!)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: comp2, repeats: true)
+                //Information that will be displayed in the notification
+                let content = UNMutableNotificationContent()
+                content.title = "Your document is about to expire in 7 days!"
+                content.subtitle = alert.textFields!.first!.text! + " is about to expire soon"
+                content.body = "Click here and check out the expiration date before it's to late!"
+                
+                let request = UNNotificationRequest(
+                    identifier: alert.textFields!.first!.text!,
+                    content: content,
+                    trigger: trigger
+                )
+                
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+                    if error != nil {
+                        //handle error
+                        print("Error")
+                    } else {
+                         print("Notification set up successfully")
+                    }
+                })
+                
+                
+                
+                
+                
                 
                 
                 let encodedData = try? JSONEncoder().encode(data)
@@ -183,7 +309,25 @@ class DocumentsController: UIViewController, UICollectionViewDelegate, UICollect
                 let defaults = UserDefaults.standard
                 defaults.set(encodedData, forKey: usersData.usersDoc)
                 
+                
                 self.collectionView.reloadData()
+                
+                //Make completeAlert to notif. that save was succesful and to let user know how to change pic
+                let completeAlert = UIAlertController(title: "Saved!", message: "Your document has been saved. If you want to add a picture to your saved document, just add it by clicking on the docment and then selecting edit at the top.", preferredStyle: UIAlertController.Style.alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                    
+                    
+                    
+                    
+                })
+                
+                
+                completeAlert.addAction(okAction)
+                
+                self.present(completeAlert,animated: true,completion: nil)
+                
+                
                 
                 
             case .destructive: break

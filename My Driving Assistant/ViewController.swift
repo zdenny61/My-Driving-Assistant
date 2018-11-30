@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import UserNotifications
+
 
 
 
@@ -29,7 +31,8 @@ class ViewController: UIViewController {
 //        let testData = MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "ID", nameOnDoc: "Zachary Denny", expDate: "01/27/1997")
 //        archiveMovie(memeModel: testData)
         
-        
+        //asks for the permistion to use notifications
+        initNotificationSetupCheck()
         
         
        
@@ -249,6 +252,20 @@ class ViewController: UIViewController {
         })
         
         
+    }
+    
+    
+    
+//Ask for permistion to display notifications
+    func initNotificationSetupCheck() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert])
+        { (success, error) in
+            if success {
+                print("Permission Granted")
+            } else {
+                print("There was a problem!")
+            }
+        }
     }
     
     

@@ -10,14 +10,28 @@ import UIKit
 import CoreData
 
 
+//let imageData = #imageLiteral(resourceName: "DL-Logo.png").pngData()
+//var data: [MemeModel] = [] //= [MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png").pngData()! as NSData, name: "ID", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+                        // MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png").pngData()! as NSData, name: "Registration", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+                       //  MemeModel(image:  #imageLiteral(resourceName: "DL-Logo.png").pngData()! as NSData, name: "Insurence", nameOnDoc: "Zachary Denny", expDate: "01/27/1997")]
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+//    let imageData = #imageLiteral(resourceName: "DL-Logo.png").pngData()
+//    var data: [MemeModel] = [MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png").pngData()! as NSData, name: "ID", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+//                             MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png").pngData()! as NSData, name: "Registration", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+//                             MemeModel(image:  #imageLiteral(resourceName: "DL-Logo.png").pngData()! as NSData, name: "Insurence", nameOnDoc: "Zachary Denny", expDate: "01/27/1997")]
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        let imageData = #imageLiteral(resourceName: "DL-Logo.png").pngData()
+//        data = [MemeModel(image: imageData! as NSData, name: "ID", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+//        MemeModel(image: imageData! as NSData, name: "Registration", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
+//        MemeModel(image: imageData! as NSData, name: "Insurence", nameOnDoc: "Zachary Denny", expDate: "01/27/1997")]
         
         
 //        let dataDefault: [MemeModel] = [MemeModel(image: #imageLiteral(resourceName: "DL-Logo.png"), name: "ID", nameOnDoc: "Zachary Denny", expDate: "01/27/1997"),
@@ -36,6 +50,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //Used for retreaving
         // Getting
+        
+        
+        
+        
         
         let defaults = UserDefaults.standard
         if let stringOne = defaults.data(forKey: usersData.usersDoc) {
