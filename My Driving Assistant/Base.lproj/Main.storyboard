@@ -298,6 +298,84 @@
             </objects>
             <point key="canvasLocation" x="-15.199999999999999" y="474.51274362818594"/>
         </scene>
+        <!--Photo Viewer Controller-->
+        <scene sceneID="T8a-X2-CKE">
+            <objects>
+                <viewController id="XLZ-mF-mY2" customClass="PhotoViewerController" customModule="My_Driving_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aFV-LT-8yq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y80-XL-Qq4">
+                                <rect key="frame" x="16" y="20" width="93" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="324-XQ-Ph5"/>
+                                    <constraint firstAttribute="width" constant="93" id="CKd-me-dg3"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mCK-86-spm" kind="show" id="Sgy-4Q-Bkm"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="            Viewer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpc-ec-L86">
+                                <rect key="frame" x="117" y="20" width="242" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3aM-Gb-m3T">
+                                <rect key="frame" x="16" y="126" width="343" height="455"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx3-YC-BVF">
+                                <rect key="frame" x="16" y="589" width="343" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="LCx-9Y-WHW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjj-wb-pwl">
+                                <rect key="frame" x="16" y="71" width="343" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="NXT-yb-WAX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26765921710000001" green="0.59671926500000005" blue="0.96866947410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="y80-XL-Qq4" firstAttribute="leading" secondItem="kjj-wb-pwl" secondAttribute="leading" id="3LF-Oe-3Xc"/>
+                            <constraint firstItem="y80-XL-Qq4" firstAttribute="top" secondItem="Rpc-ec-L86" secondAttribute="top" id="Acx-Fx-SdR"/>
+                            <constraint firstItem="3aM-Gb-m3T" firstAttribute="trailing" secondItem="Yx3-YC-BVF" secondAttribute="trailing" id="Jqw-09-Vq4"/>
+                            <constraint firstItem="Yx3-YC-BVF" firstAttribute="top" secondItem="3aM-Gb-m3T" secondAttribute="bottom" constant="8" symbolic="YES" id="U9U-jE-eSs"/>
+                            <constraint firstItem="Rpc-ec-L86" firstAttribute="trailing" secondItem="kjj-wb-pwl" secondAttribute="trailing" id="Ykr-Hu-Yir"/>
+                            <constraint firstItem="3aM-Gb-m3T" firstAttribute="top" secondItem="kjj-wb-pwl" secondAttribute="bottom" constant="8" symbolic="YES" id="bvX-af-BGa"/>
+                            <constraint firstItem="kjj-wb-pwl" firstAttribute="trailing" secondItem="3aM-Gb-m3T" secondAttribute="trailing" id="dh8-T8-3tk"/>
+                            <constraint firstItem="y80-XL-Qq4" firstAttribute="top" secondItem="J4l-oE-fmK" secondAttribute="top" id="faQ-Ic-wOJ"/>
+                            <constraint firstItem="y80-XL-Qq4" firstAttribute="leading" secondItem="aFV-LT-8yq" secondAttribute="leadingMargin" id="ff5-S1-tzY"/>
+                            <constraint firstItem="3aM-Gb-m3T" firstAttribute="leading" secondItem="Yx3-YC-BVF" secondAttribute="leading" id="gGn-Tp-L2x"/>
+                            <constraint firstItem="kjj-wb-pwl" firstAttribute="top" secondItem="y80-XL-Qq4" secondAttribute="bottom" constant="8" symbolic="YES" id="jNd-DP-tzv"/>
+                            <constraint firstAttribute="bottom" secondItem="Yx3-YC-BVF" secondAttribute="bottom" constant="20" symbolic="YES" id="kYd-F5-wea"/>
+                            <constraint firstItem="Rpc-ec-L86" firstAttribute="trailing" secondItem="aFV-LT-8yq" secondAttribute="trailingMargin" id="kgt-Wl-92w"/>
+                            <constraint firstItem="kjj-wb-pwl" firstAttribute="leading" secondItem="3aM-Gb-m3T" secondAttribute="leading" id="la9-u2-3kP"/>
+                            <constraint firstItem="Rpc-ec-L86" firstAttribute="leading" secondItem="y80-XL-Qq4" secondAttribute="trailing" constant="8" symbolic="YES" id="wbD-W8-Ziq"/>
+                            <constraint firstItem="kjj-wb-pwl" firstAttribute="top" secondItem="Rpc-ec-L86" secondAttribute="bottom" constant="8" symbolic="YES" id="xkS-bi-cbx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J4l-oE-fmK"/>
+                    </view>
+                    <connections>
+                        <outlet property="PhotoView" destination="3aM-Gb-m3T" id="gDZ-b1-8QR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="req-Cn-mba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3978.4000000000001" y="474.51274362818594"/>
+        </scene>
         <!--Looking View Controller-->
         <scene sceneID="GcJ-nG-tWI">
             <objects>
@@ -355,10 +433,11 @@ Expiration Date: 01/27/1997</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-lQ-Vko">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-lQ-Vko">
                                 <rect key="frame" x="16" y="71" width="343" height="321"/>
                                 <connections>
                                     <action selector="changePhotoPush:" destination="mCK-86-spm" eventType="touchUpInside" id="m8a-FK-qLi"/>
+                                    <segue destination="XLZ-mF-mY2" kind="show" id="hPg-di-0TW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -408,8 +487,11 @@ Expiration Date: 01/27/1997</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmv-th-o29">
-                                <rect key="frame" x="283" y="14" width="35" height="35"/>
-                                <state key="normal" image="Pluse.png"/>
+                                <rect key="frame" x="324" y="20" width="35" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="liu-v4-c8a"/>
+                                </constraints>
+                                <state key="normal" image="109526.png"/>
                                 <connections>
                                     <action selector="addNewDocumentPush:" destination="FRQ-0y-Iqt" eventType="touchUpInside" id="JkQ-bi-IRa"/>
                                 </connections>
@@ -465,28 +547,41 @@ Expiration Date: 01/27/1997</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptr-rg-5ZO">
+                                <rect key="frame" x="240" y="20" width="76" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G1O-Mg-jli"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.26765921711921692" green="0.59671926498413086" blue="0.96866947412490845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="GFM-v7-6OB" firstAttribute="leading" secondItem="Pp4-6h-ZbN" secondAttribute="trailing" constant="8" symbolic="YES" id="0Z0-bQ-gg5"/>
+                            <constraint firstItem="ptr-rg-5ZO" firstAttribute="leading" secondItem="GFM-v7-6OB" secondAttribute="trailing" constant="8" symbolic="YES" id="1s9-23-K6U"/>
                             <constraint firstItem="mnZ-bk-N7A" firstAttribute="leading" secondItem="1Qr-dx-xam" secondAttribute="leading" id="2zd-IO-Mfl"/>
+                            <constraint firstItem="Hmv-th-o29" firstAttribute="trailing" secondItem="ecI-bf-rZY" secondAttribute="trailingMargin" id="6Ga-09-Cbk"/>
                             <constraint firstItem="7WM-MO-xiP" firstAttribute="leading" secondItem="ecI-bf-rZY" secondAttribute="leading" id="6Y5-hT-YUK"/>
                             <constraint firstItem="7WM-MO-xiP" firstAttribute="leading" secondItem="mnZ-bk-N7A" secondAttribute="leading" id="7Cn-JI-mCH"/>
                             <constraint firstItem="7WM-MO-xiP" firstAttribute="trailing" secondItem="1Qr-dx-xam" secondAttribute="trailing" id="BC4-8x-6wU"/>
                             <constraint firstItem="mnZ-bk-N7A" firstAttribute="bottom" secondItem="jt1-RP-p2z" secondAttribute="bottom" id="DTp-XC-X5e"/>
                             <constraint firstItem="1Qr-dx-xam" firstAttribute="top" secondItem="Pp4-6h-ZbN" secondAttribute="bottom" constant="8" symbolic="YES" id="GW0-rD-wMe"/>
                             <constraint firstItem="Pp4-6h-ZbN" firstAttribute="leading" secondItem="ecI-bf-rZY" secondAttribute="leadingMargin" id="JmR-jj-0zn"/>
+                            <constraint firstItem="Hmv-th-o29" firstAttribute="top" secondItem="ptr-rg-5ZO" secondAttribute="top" id="Kqu-AL-wY5"/>
                             <constraint firstItem="mnZ-bk-N7A" firstAttribute="top" secondItem="Pp4-6h-ZbN" secondAttribute="top" id="MZL-Kx-3Nn"/>
                             <constraint firstItem="7WM-MO-xiP" firstAttribute="bottom" secondItem="mnZ-bk-N7A" secondAttribute="bottom" id="Q8S-7q-KhZ"/>
                             <constraint firstItem="7WM-MO-xiP" firstAttribute="top" secondItem="ecI-bf-rZY" secondAttribute="top" id="SXA-f0-Xbn"/>
-                            <constraint firstItem="1Qr-dx-xam" firstAttribute="top" secondItem="Hmv-th-o29" secondAttribute="bottom" constant="9" id="Ttq-Ds-eoN"/>
+                            <constraint firstItem="Hmv-th-o29" firstAttribute="leading" secondItem="ptr-rg-5ZO" secondAttribute="trailing" constant="8" symbolic="YES" id="Ypi-85-teU"/>
+                            <constraint firstItem="Hmv-th-o29" firstAttribute="bottom" secondItem="ptr-rg-5ZO" secondAttribute="bottom" id="Zbw-zZ-fb5"/>
                             <constraint firstItem="mnZ-bk-N7A" firstAttribute="trailing" secondItem="1Qr-dx-xam" secondAttribute="trailing" id="cPg-zd-JaD"/>
                             <constraint firstAttribute="trailing" secondItem="7WM-MO-xiP" secondAttribute="trailing" id="hwq-Wy-YpP"/>
                             <constraint firstItem="Pp4-6h-ZbN" firstAttribute="top" secondItem="GFM-v7-6OB" secondAttribute="top" id="nXg-x2-Qua"/>
-                            <constraint firstItem="Hmv-th-o29" firstAttribute="leading" secondItem="GFM-v7-6OB" secondAttribute="trailing" constant="51" id="ntJ-zN-ltm"/>
                             <constraint firstItem="1Qr-dx-xam" firstAttribute="bottom" secondItem="7WM-MO-xiP" secondAttribute="bottom" id="owf-H8-fci"/>
                             <constraint firstItem="mnZ-bk-N7A" firstAttribute="top" secondItem="jt1-RP-p2z" secondAttribute="top" id="pzu-qm-gIe"/>
                             <constraint firstItem="jt1-RP-p2z" firstAttribute="trailing" secondItem="GFM-v7-6OB" secondAttribute="trailing" constant="143" id="r0F-w6-EL7"/>
+                            <constraint firstItem="Hmv-th-o29" firstAttribute="top" secondItem="GFM-v7-6OB" secondAttribute="top" id="ul8-EN-GZg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jt1-RP-p2z"/>
                     </view>
@@ -589,7 +684,7 @@ Expiration Date: 01/27/1997</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9R-xw-3GR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4281" y="-29"/>
+            <point key="canvasLocation" x="-4233" y="-269"/>
         </scene>
         <!--Emergency Contacts-->
         <scene sceneID="lKm-Uv-MMP">
@@ -792,7 +887,67 @@ Expiration Date: 01/27/1997</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e94-1S-H7L">
                                 <rect key="frame" x="16" y="66" width="343" height="581"/>
                                 <color key="backgroundColor" red="0.1282487722" green="0.57516057539999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <string key="text">This is the help page and the about page. This is where you will find the information about the creators and basic operations on how to use this application.</string>
+                                <mutableString key="text">This is the app help page where you can find how do do things on the app. 
+
+
+
+ADD A DOCUMENT:
+***Documents feature uses biometric authentication to keep your documents as stored securely on your device and they never leave your devices files.
+
+1)  Start by going to the documents feature
+
+2) After authentication click on the plus at the top
+
+3) Fill in the pop up box with your information then click ok
+
+4) After clicking ok a document is created with a placeholder for the image
+
+5) If you choose to change out the place holder for a real image, tap on the document
+
+6) After you are brought to the document, you can click edit and that will bring up a camera so you can set a image
+
+7) After you take the image, it will give you the option to edit the documents info again or click cancel
+
+8) Now your new document is saved with a image of your choice!
+
+
+ADD A CONTACT:
+
+1)  Start by going to the Call feature
+
+2) Next click on the plus sign at the top
+
+3) You will then be prompted with a box to fill in the information
+
+4) After you have the information input the way you like, tap ok
+
+5) Your new contact is now created and can be called with just a tap!
+
+
+EDIT A CONTACT:
+
+1)  Start by going to the Call feature
+
+2) Next swipe left on the contact that you want to edit
+
+3) You will then be prompted with two options “Edit” and “Delete”
+
+4) Select the option that you want
+
+5) If you tap “Delete” then your done, but if you selected edit, you should be prompted with a box to fill in
+
+6) After you tap ok, your contact will be saved with the new information
+
+
+USE LOCATION FEATURE:
+
+1)  Start by going to the location feature
+
+2) Next select the kind of place you want to find around you
+
+3) After you tap on your selection, you will be shown all the places around you in a 25 mile radius that match the description
+
+4) Thats it! If you want to do more searches, tap on the back button and then select what you want to search next</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -921,16 +1076,18 @@ Required (another car, jumper cables)
         </scene>
     </scenes>
     <resources>
+        <image name="109526.png" width="128" height="128"/>
         <image name="Emergency-Button.png" width="640" height="240"/>
         <image name="Pluse.png" width="35" height="35"/>
         <image name="White-Button.png" width="600" height="169"/>
         <image name="blue-circle-button.png" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Sgy-4Q-Bkm"/>
         <segue reference="XgV-i9-yb3"/>
-        <segue reference="ZFL-yQ-fGX"/>
-        <segue reference="d4L-cF-Tt7"/>
+        <segue reference="AAY-TN-A3F"/>
+        <segue reference="OAK-Pi-vAT"/>
         <segue reference="HHW-2Q-vI3"/>
-        <segue reference="BCe-4w-Bqm"/>
+        <segue reference="7i7-LS-sgF"/>
     </inferredMetricsTieBreakers>
 </document>
